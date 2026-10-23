@@ -2,7 +2,7 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-{%- set origin = site.mock_url if site.mockup else site.url -%}
+{%- set origin = build.origin -%}
 User-agent: *
 Allow: /
 

@@ -1,4 +1,4 @@
-{%- set origin = site.mock_url if site.mockup else site.url -%}
+{%- set origin = build.origin -%}
 {%- set pageUrl = canonical or (page.url | cleanUrl) -%}
 {%- set fullTitle = headTitle or ((seo_title or title) + " — " + site.name) -%}
 <!doctype html>
@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ fullTitle }}</title>
-{%- if site.mockup %}
+{%- if build.mockup %}
 <meta name="robots" content="noindex, nofollow">
 {%- endif %}
 {%- if description %}
@@ -32,7 +32,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="preload" href="/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
-<script>window.SITE={mockup:{{ 'true' if site.mockup else 'false' }}{% if not site.mockup %},gaId:"{{ site.ga_id }}"{% endif %}};</script>
+<script>window.SITE={mockup:{{ 'true' if build.mockup else 'false' }}{% if not build.mockup %},gaId:"{{ site.ga_id }}"{% endif %}};</script>
 </head>
 <body>
 <a class="skip-link" href="#page">Skip to Content</a>

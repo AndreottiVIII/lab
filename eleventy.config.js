@@ -5,14 +5,18 @@ const fs = require("fs");
 const path = require("path");
 const MarkdownIt = require("markdown-it");
 const sharp = require("sharp");
+const build = require("./src/_data/build.js");
 
 const SRC_IMG = path.join(__dirname, "src", "img");
 const WIDTHS = [480, 960, 1600];
 const imageInfo = {}; // nome file -> {w, h}
+// "" sul sito, "/lab" nel laboratorio. Il plugin HTML Base (in fondo) gira PRIMA di "html-polish":
+// quando questa trasformazione vede l'HTML, i percorsi locali hanno gia' il prefisso.
+const BASE = build.prefix.slice(0, -1);
 
 function pad(n) { return String(n).padStart(2, "0"); }
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
   // ---------- Markdown ----------
   const md = new MarkdownIt({ html: true, breaks: false, linkify: false });
   eleventyConfig.setLibrary("md", md);
@@ -146,7 +150,7 @@ module.exports = function (eleventyConfig) {
 
     // 4) <img> locali: misure, srcset e caricamento pigro
     content = content.replace(/<img ([^>]*?)(\s*\/)?>/g, (m, attrs) => {
-      const src = (attrs.match(/src="\/img\/([^"\/]+)"/) || [])[1];
+      const src = (attrs.match(new RegExp('src="' + BASE + '/img/([^"/]+)"')) || [])[1];
       if (!src) return m;
       const info = imageInfo[src];
       let a = attrs;
@@ -155,9 +159,9 @@ module.exports = function (eleventyConfig) {
         if (!/srcset=/.test(a)) {
           const ext = path.extname(src);
           const stem = path.basename(src, ext);
-          const set = WIDTHS.filter((w) => info.w > w + 40).map((w) => `/img/w/${stem}-${w}${ext} ${w}w`);
+          const set = WIDTHS.filter((w) => info.w > w + 40).map((w) => `${BASE}/img/w/${stem}-${w}${ext} ${w}w`);
           if (set.length) {
-            set.push(`/img/${src} ${info.w}w`);
+            set.push(`${BASE}/img/${src} ${info.w}w`);
             a += ` srcset="${set.join(", ")}"`;
             if (!/sizes=/.test(a)) a += ` sizes="(max-width: 800px) 100vw, 800px"`;
           }
@@ -176,7 +180,16 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Nel laboratorio (PATH_PREFIX="/lab/") tutti i link, le immagini, il CSS e il JS ricevono il prefisso.
+  // Il plugin lavora prima di "html-polish" (vedi BASE in cima): le trasformazioni qui sopra ne tengono conto.
+  // Sul sito (nessun prefisso) non viene nemmeno attivato.
+  if (build.lab) {
+    const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  }
+
   return {
+    pathPrefix: build.prefix,
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     markdownTemplateEngine: false, // il Markdown non passa da Nunjucks: le graffe nei testi restano testo
     htmlTemplateEngine: "njk",

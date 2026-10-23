@@ -6,7 +6,7 @@ layout: layouts/base.njk
   {%- set S = collections.pageDocs | pageByKey(copy_of) -%}
   {%- set H = { hero: S.data.hero, button: S.data.button, latest_heading: S.data.latest_heading, featured_label: S.data.featured_label, slideshow: S.data.slideshow, bio: S.templateContent } -%}
 {%- endif -%}
-<script>if(location.pathname==='/index')location.replace('/blog-index');</script>
+<script>if(location.pathname==='{{ '/index' | url }}')location.replace('{{ '/blog-index' | url }}');</script>
 <section class="home-hero">
   <figure class="home-hero-image"><img src="{{ H.hero.image }}" alt="{{ H.hero.alt }}" sizes="(max-width: 800px) 100vw, 50vw" loading="eager" fetchpriority="high"></figure>
   <div class="home-hero-text">

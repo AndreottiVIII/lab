@@ -365,11 +365,19 @@ if (IS_LAB) {
     const rel = path.relative(SITE_DIR, f);
     if (!/<meta name="robots" content="noindex, nofollow">/.test(h)) fail(`LAB ${rel}: manca noindex`);
     if (/googletagmanager|G-[A-Z0-9]{8,}/.test(h)) fail(`LAB ${rel}: compare Analytics`);
-    for (const m of h.matchAll(/\s(?:href|src)="(\/[^"]*)"/g)) {
-      const v = m[1];
+    const locali = [];
+    for (const m of h.matchAll(/\s(?:href|src)="(\/[^"]*)"/g)) locali.push(m[1]);
+    for (const m of h.matchAll(/\ssrcset="([^"]*)"/g)) {
+      for (const part of m[1].split(",")) { const u = part.trim().split(/\s+/)[0]; if (u.startsWith("/")) locali.push(u); }
+    }
+    const refresh = h.match(/http-equiv="refresh" content="\d+; url=([^"]*)"/i);
+    if (refresh && refresh[1].startsWith("/")) locali.push(refresh[1]);
+    for (const v of locali) {
       if (v.startsWith("//")) continue;
       if (!v.startsWith(prefix) && v !== prefix.slice(0, -1)) {
         if (sbagliati++ < 10) fail(`LAB ${rel}: indirizzo senza prefisso ${prefix}: ${v}`);
+      } else if (v.startsWith(prefix + prefix.slice(1))) {
+        if (sbagliati++ < 10) fail(`LAB ${rel}: prefisso doppio: ${v}`);
       }
     }
   }

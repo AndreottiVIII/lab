@@ -1,4 +1,5 @@
 <header class="site-header">
+  {%- if build.lab %}<span class="lab-badge" title="Laboratorio: non è il sito vero">LAB</span>{% endif %}
   <a class="site-title" href="/">{{ site.name }}</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span></button>
   <nav id="site-nav" class="site-nav" aria-label="Main">

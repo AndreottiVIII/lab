@@ -25,7 +25,7 @@ eleventyComputed:
 <script>
 /* Vecchi indirizzi del blog: /post?tag=X, /post?category=X, /post?offset=N */
 (function(){var q=new URLSearchParams(location.search),e=function(s){return encodeURIComponent(s).replace(/%20/g,'+');};
-if(q.get('tag'))location.replace('/post/tag/'+e(q.get('tag')));
-else if(q.get('category'))location.replace('/post/category/'+e(q.get('category')));
-else if(q.get('offset'))location.replace('/post/page/2');})();
+if(q.get('tag'))location.replace('{{ '/post/tag/' | url }}'+e(q.get('tag')));
+else if(q.get('category'))location.replace('{{ '/post/category/' | url }}'+e(q.get('category')));
+else if(q.get('offset'))location.replace('{{ '/post/page/2' | url }}');})();
 </script>
