@@ -31,4 +31,8 @@ gallery:
   alt: A young woman with braided hair, smiling with eyes closed, wearing pink textured clothing, and pink glittery eyeshadow.
 - image: /img/davidecaniatti-lezione7-28.jpg
   alt: A woman with braided hair and makeup featuring pink eyeshadow, wearing a beige blazer, facing slightly to the right with a serious expression against a pink background.
+floor: photography
+featured: true
+order: 1
+image: /img/house-portrait.jpg
 ---

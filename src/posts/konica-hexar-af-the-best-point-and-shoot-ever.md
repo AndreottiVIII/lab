@@ -11,6 +11,9 @@ labels:
 - 35mm
 excerpt: 'The Konica Hexar combines everything one can look for in a point & shoot: image quality, innovative design and speed of use.'
 permalink: /post/konica-hexar-af-the-best-point-and-shoot-ever.html
+floor: workshop
+order: 7
+short: Konica Hexar AF
 ---
 
 Point and shoot are always a polarizing topic among photographers. It is often difficult to define a hierarchy of their essential attributes. Someone will prefer compactness, while for someone else the design will be decisive, for others, finally, the image quality will be fundamental. Within the category, we can find two extremes: **ultra-compact cameras**, for example, the excellent Minox, **and super-luxury point & shoot cameras.** Among the latter, we will conveniently place the various Contax T, Nikon 35, and Rollei 35, machines capable of rivaling in quality and style with the best SLRs of their time.

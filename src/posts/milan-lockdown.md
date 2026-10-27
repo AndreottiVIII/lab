@@ -10,6 +10,10 @@ labels:
 - Milan
 excerpt: 52 weeks and a little book later.
 permalink: /post/post/milan-lockdown.html
+floor: writing
+featured: true
+order: 7
+image: /img/house-lockdown3.jpg
 ---
 
 Exactly one year ago, the first lockdown weekend began in Italy. 52 weeks later, many things have changed, while the virus is unfortunately still a constant presence. Partly out of curiosity, partly out of boredom, I then promised myself to take a camera with me every time I left the house. Looking back at these shots a year later, they appear incredibly distant, *almost* historical. I am happy to have grouped them for several months already because this time, of which we are now tired, will be one not too distant day seen as a unique moment in history. We will look at it with the same mystery and curiosity with which we used to ask our grandparents about the war. One way to make every moment a little more bearable is, I think, to have stories to tell.

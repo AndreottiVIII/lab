@@ -7,6 +7,8 @@ author: Davide Caniatti
 cover: /img/mildec-140.jpg
 excerpt: ''
 permalink: /post/nikonos-iv-a-the-perfect-winter-camera.html
+floor: workshop
+image: /img/house-g-nikonos.jpg
 ---
 
 Winter is a complex season for photographers: **the lack of light, chill, and rain are not a camera's best friends.** When there is little light, the ISO can be raised, while to shelter from the elements we choose tropicalized cameras. However, when we move on to film, the matter becomes more complicated. We cannot reach the now stratospheric possibilities of digital sensors and we do not want to run the risk of ruining a device that very often has no longer a repair service.

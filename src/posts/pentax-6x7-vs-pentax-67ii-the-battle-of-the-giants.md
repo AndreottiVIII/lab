@@ -11,6 +11,10 @@ author: Davide Caniatti
 cover: /img/pentaxona3.jpg
 excerpt: In recent years, we have witnessed a resurgence of the 6x7 format. Although this format never truly disappeared, the prices of some of its cameras have increased more than any other system. This interest is justified, despite recent price hikes, as the costs compared to the 90s are negligible.
 permalink: /post/pentax-6x7-vs-pentax-67ii-the-battle-of-the-giants.html
+floor: workshop
+featured: true
+order: 1
+image: /img/house-g-pentax67.jpg
 ---
 
 In recent years, we have witnessed a resurgence of the 6x7 format. Although this format never truly disappeared, the prices of some of its cameras have increased more than any other system. This interest is justified, despite recent price hikes, as the costs compared to the 90s are negligible. With less than $1500, it is now possible to build a kit that was once the prerogative of renowned studios and established professionals. The first to bet on this system was the Japanese Pentax, producing devices from 1969 to 1998. After this date, the last model, the Pentax 67ii, was no longer mass-produced but never officially ceased.

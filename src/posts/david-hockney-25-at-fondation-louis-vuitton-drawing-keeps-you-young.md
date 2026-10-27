@@ -12,6 +12,10 @@ author: Davide Caniatti
 cover: /img/hockney25-184.jpg
 excerpt: Discover *David Hockney 25*, the major retrospective at Fondation Louis Vuitton in Paris. From iconic poolside paintings to vibrant iPad drawings, the exhibition celebrates fifty years of creativity, experimentation, and the timeless energy of drawing.
 permalink: /post/david-hockney-25-at-fondation-louis-vuitton-drawing-keeps-you-young.html
+floor: writing
+featured: true
+order: 2
+image: /img/house-w-hockney25.jpg
 ---
 
 Sir David Hockney is the greatest living painter. Perhaps not the greatest artist, that is for the experts to decide, but after visiting the exhibition [*David Hockney 25*](https://www.fondationlouisvuitton.fr/fr/evenements/david-hockney-25) at the Fondation Louis Vuitton in Paris, it is hard to argue otherwise. Spanning over fifty years of his career, the show leads you, almost inevitably, to that conclusion. But let us try to bring some order to the emotion.

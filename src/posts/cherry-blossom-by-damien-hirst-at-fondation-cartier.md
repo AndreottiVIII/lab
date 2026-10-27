@@ -11,6 +11,10 @@ author: Davide Caniatti
 cover: /img/rsz-sdim1839-m40ewp.jpg
 excerpt: A visit to an exhibition that challenges how we will perceive today in the future. Explore Damien Hirst’s “Cherry Blossoms” exhibition at Fondation Cartier, a vibrant and joyful reflection on the pandemic era through contemporary art.
 permalink: /post/cherry-blossom-by-damien-hirst-at-fondation-cartier.html
+floor: writing
+featured: true
+order: 5
+image: /img/house-w-cherry2.jpg
 ---
 
 In art history manuals, it is often written how great artists have almost a sixth sense in interpreting and understanding the era in which they live better than all others around them. There is a German term, *Zeitgeist*, which precisely means “spirit of the time,” and knowing how to grasp it is a supreme sign of an artist’s skill. If we were to find the spirit of our time, the things that best represent it, we could easily list the pandemic, distance, the metaverse, the network, and the crisis. Many more or less famous artists already do this with considerable results. Take a pop-cultural phenomenon like Banksy. His street art transforms walls into an apparent mirror of the dystopian society in which we live, according to many. Up to here, we can say that the speech is “easy,” but correct. But what happens when we subvert this recipe?

@@ -21,4 +21,8 @@ gallery:
   alt: Dog in the office, 2024 (Copy)
 - image: /img/image-asset-o2fkug.jpg
   alt: ' Ozone generator, 2024 '
+floor: photography
+featured: true
+order: 4
+image: /img/house-corporate-b.jpg
 ---

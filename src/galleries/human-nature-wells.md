@@ -17,4 +17,8 @@ gallery:
   alt: Two police officers wearing masks stand on either side of a flock of pigeons on a city street, with a large building and pedestrians in the background.
 - image: /img/milanolockdown015-2.jpg
   alt: Black and white photo of an ornate, long corridor with decorated high ceilings, arched windows, and a patterned floor, leading to an open doorway at the end.
+floor: photography
+featured: true
+order: 5
+image: /img/house-lockdown.jpg
 ---

@@ -11,6 +11,7 @@ labels:
 - Sigma
 excerpt: Why I changed my Sigma SD Quattro with a H model.
 permalink: /post/when-it-comes-to-foveon-do-sizes-matter.html
+floor: workshop
 ---
 
 There are more than a few things in common between Foveon photographers and insecure males, but they also share a fundamental question: do sizes matter? A few days ago, I had the opportunity to upgrade: I added the H model to my Sigma SD Quattro. The difference is simple: the H model has an Aps-h sensor with a 1.3 crop factor. The original Quattro features a slightly less than the regular Aps-c sensor, with a crop factor of around 1.6. The megapixels also change 24 versus 19, if it makes sense to count the pixels on a Foveon sensor the way we would with a Bayer sensor.

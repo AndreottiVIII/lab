@@ -10,6 +10,7 @@ labels:
 - Light meter
 excerpt: Unload the full power of your digital camera's sensor with this easy method!
 permalink: /post/how-to-achieve-the-highest-dinamic-range-digital-edition.html
+floor: workshop
 ---
 
 Digital cameras have significantly improved in dynamic range, and they can now rival the latest films in many situations. Unfortunately, one of the intrinsic limitations of the Foveon means that it suffers particularly in high contrast situations. Despite this, from this small inconvenience, I have drawn some lessons that can be useful with all digital cameras. **Putting these small steps to good use will make it very easy to “squeeze” the sensor to its maximum.** Let's see them!

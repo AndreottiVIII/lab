@@ -9,6 +9,7 @@ labels:
 - Konica
 excerpt: A lens for beginners, but with incredible potential and value
 permalink: /post/konica-hexanon-40mm-18-a-lens-of-true-value.html
+floor: workshop
 ---
 
 Although Konica has ceased to exist for the past 20 years, the Japanese company could boast almost 130 years of experience in the photographic industry at the time of closing. Taking this small lens in hand, you soon realize the mastery achieved by the industry of the rising sun at the end of the 1970s. This pancake lens is one of the most versatile of focal lengths, suitable for practically everything. With a 40mm you can range from landscape to portrait and find its ideal uses in street and reportage. Over the years, this focal length, ignored almost until then, has gained more popularity, often being offered in very small sizes: a real all-rounder requiring minimum space and always ready to shoot.

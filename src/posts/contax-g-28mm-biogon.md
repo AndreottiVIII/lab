@@ -7,6 +7,10 @@ author: Davide Caniatti
 cover: /img/rsz-dscf5722.jpg
 excerpt: ''
 permalink: /post/contax-g-28mm-biogon.html
+floor: workshop
+featured: true
+order: 3
+image: /img/house-g-contaxg28.jpg
 ---
 
 Some heroes are celebrated more than others. They gradually enter the legends and remain etched in the collective imagination. Much the same happens with lenses. However, there are also some equally deserving people who for one reason or another never rise to the status of legends. Not that they're much worse, but they're just not flashy enough to make headlines. Also in this case there is a parallelism in photography. The Contax G 28mm Biogon is exactly that: a great performer, who is never talked about well enough. Let's see why.

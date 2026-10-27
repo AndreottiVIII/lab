@@ -7,6 +7,8 @@ author: Davide Caniatti
 cover: /img/rsz-dscf5222.jpg
 excerpt: The Bessa R, this is it, was not quite at the top of my buying priorities. I don't have any valid m39 lenses in my kit, and I'm not particularly interested in a rangefinder. At the same time, however, the price was attractive and the curiosity a lot, so I bought it intending to resell it, but not immediately!
 permalink: /post/bessa-r-unboxing-a-2000-camera.html
+floor: workshop
+image: /img/house-g-bessa.jpg
 ---
 
 2020 was a challenging year for many, so it seemed right to end it by giving myself a small treat. I was lucky enough to find one of those so-called "*mint with box*" cameras on my hands. I know that behind these words often lies a scam, but in this case, the shop was not lying, and the device was brand new. By *new* I mean never opened, still wrapped in cellophane, and without ever taking a roll.

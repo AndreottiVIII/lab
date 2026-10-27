@@ -85,3 +85,27 @@ Dopo la build, il workflow lancia `node scripts/check-urls.mjs`. Lo script ha de
 In locale, dopo `npx eleventy`: `node scripts/check-urls.mjs`. Su Windows segnala `/post/tag/Medium+format`, perché lì i due tag che differiscono solo per le maiuscole si sovrappongono: su GitHub Actions (Linux) non succede e fa fede quello.
 
 Gli indirizzi vecchi non si tolgono né si rinominano. Se un giorno uno deve sparire davvero, si toglie dall'elenco nello script, di proposito e in un commit a parte.
+
+## La casa in sezione (home e piani)
+
+La home `/` è una **sezione di casa** disegnata dai dati; `/projects`, `/writing`, `/workshop` e `/photography` sono le pagine dei quattro piani (elenco completo, con foto). Gli articoli, le gallerie e tutte le pagine vecchie restano dove sono.
+
+| Piano | Stanza | Cosa ci sta |
+|---|---|---|
+| Projects | serra | i file di `src/projects/*.md` (uno per progetto: titolo, riga di descrizione, indirizzo, lingua, foto) |
+| Writing | studiolo | gli articoli con `floor: writing` (o senza `floor`) |
+| Workshop | officina | gli articoli con `floor: workshop` |
+| Photography | camera oscura | le gallerie (`src/galleries`) |
+
+Campi in più nel frontmatter di articoli, gallerie e progetti (tutti facoltativi):
+
+- `floor` — `writing` o `workshop` (solo articoli; senza il campo va in Writing).
+- `featured: true` — merita un posto nel disegno.
+- `order` — numero: ordine tra i contenuti in evidenza (1 = primo posto).
+- `image` — foto per il disegno (se manca si usa `cover`; se manca anche quella, il posto resta tratteggiato).
+- `short` — nome corto per le targhette dell'officina (articoli).
+- `lang: it` — mostra l'etichetta IT; `tag` — scritta al posto della foto (progetti senza schermata, es. PAPER).
+
+Le stanze hanno posti fissi: serra 6, studiolo 8, banco dell'officina 5, filo della cantina 5. Si riempiono con i `featured` (poi `order`, poi i più recenti); se non ce ne sono abbastanza si prendono i più recenti. Quello che non entra finisce **solo nella legenda**: in officina diventa una targhetta sul pannello forato (fino a 5, tutte sotto un solo numero), il resto è la riga "and N more →" che porta alla pagina del piano. I numeri cerchiati e la legenda si generano da soli, dall'alto in basso. Il codice sta in `lib/house.js` (posti, numeri, disegno), `src/_includes/layouts/house.njk` (legenda), `src/floors.njk` (pagine dei piani), `src/assets/css/house.css` e `src/assets/js/house.js`.
+
+**Cantina:** le stampe sul filo arrivano in negativo e si sviluppano (2-3 secondi) al passaggio del mouse, al tocco, con la tastiera o, da telefono, quando scorrono nello schermo. Si ricordano in `localStorage` (`dc-developed`); con `prefers-reduced-motion` la transizione è breve.

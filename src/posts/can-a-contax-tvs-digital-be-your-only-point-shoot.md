@@ -7,6 +7,8 @@ author: Davide Caniatti
 cover: /img/kicx0427.jpg
 excerpt: The Contax TVS Digital, a 20-year-old digital camera, offers a unique blend of nostalgia and functionality. Despite its age, this compact camera delivers beautiful photos, making it a surprising find for photography enthusiasts. As the market for 35mm point & shoot cameras becomes increasingly expensive, the Contax TVS Digital stands out as a viable alternative. Its CCD sensor captures the magic of film, providing a distinctive photographic experience.
 permalink: /post/can-a-contax-tvs-digital-be-your-only-point-shoot.html
+floor: workshop
+image: /img/house-g-tvs-burano.jpg
 ---
 
 The first time I wrote about the Contax TVS Digital was over a year ago. Discovering this little digital camera was a surprising experience. The technology from 20 years ago seemed absurdly outdated and, above all, useless. When I picked it up, it was with an almost archaeological spirit, as if to reconstruct the functioning of a now-forgotten object. Over time, I realized it was much more: it works and takes beautiful photos!

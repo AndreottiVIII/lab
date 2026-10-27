@@ -9,6 +9,7 @@ labels:
 - Gallery
 excerpt: My second zine on Milan in 2020 is finally published!
 permalink: /post/milan-cohabitation.html
+floor: writing
 ---
 
 I am really proud of this second little book, here you can see a small selection of the 36 photos selected. I felt almost a duty - but a pleasant one - to portray my city in such an exceptional time. All the pictures were shot on film and home-developed. Do you want a copy? Contact me!

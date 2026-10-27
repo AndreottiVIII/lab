@@ -17,4 +17,8 @@ gallery:
   alt: Three white disposable cups on a red surface, with two cups tilted and falling, against a white background.
 - image: /img/ied2022-47-szf2w9.jpg
   alt: A vintage silver Contax camera with a detachable viewfinder, placed on a flat surface with purple flowers in the background.
+floor: photography
+featured: true
+order: 3
+image: /img/house-stilllife.jpg
 ---

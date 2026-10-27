@@ -1,0 +1,12 @@
+<footer class="hf wrap">
+  <q>A Milan-based creative blending economics and art.</q>
+  <div class="hf-side">
+    <p class="links"><a href="/projects">Projects</a> · <a href="/writing">Writing</a> · <a href="/workshop">Workshop</a> · <a href="/photography">Photography</a> · <a href="/contact-davidecaniatti">About</a></p>
+    <ul class="social">
+      {%- for s in site.social %}
+      <li><a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}">{% include "icons/" + s.icon + ".svg" %}</a></li>
+      {%- endfor %}
+    </ul>
+    <button type="button" class="cookie-reopen" data-cookie-open>Cookie</button>
+  </div>
+</footer>

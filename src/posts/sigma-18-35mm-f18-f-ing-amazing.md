@@ -11,6 +11,7 @@ labels:
 - Sigma
 excerpt: A lens to good to be true, the perfect companion for Foveon photography.
 permalink: /post/sigma-18-35mm-f18-f-ing-amazing.html
+floor: workshop
 ---
 
 The arrival of the zoom market in the 70s and 80s profoundly changed the photography market. For the first time, the amateur photographer, as well as the reporter, could have several focal lengths attached to their camera at the same time. The possibilities in terms of versatility of use and convenience were almost endless. No longer the need for two camera bodies, no more risky lens changes, but the lens always engaged and ready for use. However, this also had disadvantages. The first and foremost was sufficient optical quality, not comparable to fixed lenses, from that time called primes. Over the years, the quality has improved, delivering more and more performing lenses.

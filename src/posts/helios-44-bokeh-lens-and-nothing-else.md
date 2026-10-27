@@ -11,6 +11,9 @@ labels:
 - Helios 44
 excerpt: A lens with an unmistakable personality, but not very suitable to become an economical and versatile 50mm
 permalink: /post/post/helios-44-bokeh-lens-and-nothing-else.html
+floor: workshop
+order: 6
+short: Helios 44
 ---
 
 There are some lenses that, since the analog reappeared, have acquired a real cult status. One of the most popular of them is certainly the Helios 44. This piece of Soviet scrap metal produced by KMZ for 40 years is one of those lenses that never go out of style. Its unique circular bokeh that is always recognizable contributed to the popularity that never ended, so much so that it is still produced today. However, net of its unique personality, **how usable is a Helios 44 today?** Here we will try to understand if it is a viable solution for a low-cost 50mm or if it is only to be considered suitable for portraits and little more.

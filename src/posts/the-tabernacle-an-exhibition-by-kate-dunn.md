@@ -9,6 +9,9 @@ labels:
 - Art
 excerpt: A little show with a lot of potential
 permalink: /post/the-tabernacle-an-exhibition-by-kate-dunn.html
+floor: writing
+featured: true
+order: 8
 ---
 
 "The Tabernacle" is one of those exhibitions that you meet a little by chance. Venice is probably the most beautiful city on the planet and has an almost endless list of things to see. There is here plenty of choice for art lovers, and running out of things to see is impossible. And if you are among the lucky ones who have been to see every single Bellini painting in the city, you should give me a good reason not to start over. However, if you have the patience to keep an eye on the panorama of private galleries in the city, the situation changes a bit. There has been little supply in the last two years, but this is not necessarily a problem. Indeed, the disappearance of wealthy tourists with a not too polite eye meant that the galleries dared even more. The public with only an uneducated eye is paradoxically more open and ready for simple things, but not for this trivial.

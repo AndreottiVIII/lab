@@ -7,6 +7,10 @@ author: Davide Caniatti
 cover: /img/dscf5899.jpg
 excerpt: ''
 permalink: /post/sigma-sd-quattro-hands-on.html
+floor: workshop
+featured: true
+order: 5
+image: /img/house-g-sigma.jpg
 ---
 
 Much has been written about Foveon sensors, and a lot will be on this blog too. In this short review I do not want to talk about the (*extraordinary!*) image quality of this camera, but to illustrate how it looks in the hands.

@@ -8,6 +8,7 @@ labels:
 - Blog
 excerpt: A small summary of the past year and the good intentions for the new one
 permalink: /post/this-blog-is-one-year-old.html
+floor: writing
 ---
 
 Exactly one year ago I published the first article on this site. Many things have changed in the last year, for example, I *finally* got my master's degree. At the same time, many things have remained the same, such as unfortunately the pandemic and the difficulties in traveling. What has not changed is also my passion for photography, but also the visual arts in general. Compatibly with my work, I decided to dedicate even more time to it, enrolling in a class at IED Milan. The anniversary is always a time, however, to take stock and make good resolutions for the future, so ... let's get started!

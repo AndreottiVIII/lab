@@ -10,6 +10,7 @@ labels:
 - Contax
 excerpt: Shooting a wedding with a Contax 645 as second camera body in 2022
 permalink: /post/contax-645-the-wedding-test.html
+floor: workshop
 ---
 
 In early June, I was hired for the first wedding of my life. It is not the first time that I have been paid - a little - to be a photographer, but it was the very first time someone entrusted me the most important day of their life. I was very anxious and nervous at the same time. The set-up was ready: my trusty Fuji GFX 50R with 32-64mm and the adapted 80mm Planar T \*. I took the tickets for Bologna (a lovely outdoor location) and closed my backpack.

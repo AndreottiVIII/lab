@@ -10,6 +10,10 @@ author: Davide Caniatti
 cover: /img/tvssina.jpg
 excerpt: If analog photography in 2021 may seem prehistoric to some, digital technology in 2002 was decidedly antediluvian compared to what we use today. Digital sensors were already rapidly establishing themselves; the previous year, the Nikon D1x was released, the first authentic DSLR designed for a large market. At the same time, however, the iPhone was still 5 years away, the most popular social network was Friendster, and Walmart was the biggest company in the world. Tom Brady was an NFL champion, and that’s the only thing that remained unchanged after nearly 20 years.
 permalink: /post/contax-tvs-digital-shooting-with-a-2002-digital-camera.html
+floor: workshop
+featured: true
+order: 4
+image: /img/house-g-tvsdigital.jpg
 ---
 
 If analog photography in 2021 may seem prehistoric to some, digital technology in 2002 was decidedly antediluvian compared to what we use today. Digital sensors were already rapidly establishing themselves; the previous year, the Nikon D1x was released, the first authentic DSLR designed for a large market. At the same time, however, the iPhone was still 5 years away, the most popular social network was Friendster, and Walmart was the biggest company in the world. Tom Brady was an NFL champion, and that’s the only thing that remained unchanged after nearly 20 years.

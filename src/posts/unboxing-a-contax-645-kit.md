@@ -12,6 +12,8 @@ author: Davide Caniatti
 cover: /img/dscf0371.jpg
 excerpt: In 2021, I purchased a Contax 645, one of the most advanced analog cameras ever made. Despite the risks of malfunctions and repair difficulties, its allure captivated me. This article explores the inaugural kit, the premium quality of its components, and the historical significance of this iconic camera.
 permalink: /post/unboxing-a-contax-645-kit.html
+floor: workshop
+image: /img/house-g-contax645.jpg
 ---
 
 2021 was a *challenging* year. Now that it comes to an end, it is right to give ourselves a little treat. In this spirit, I tried my luck and bought myself a Contax 645. It is a bit of a gamble as these cameras are prone to problems and malfunctions. Unlike other past models, once broken there is no way to repair them. Or rather, there is a way to cannibalize other bodies to take the necessary parts, but it is never an actual repair, but at most a transplant. Nonetheless, I had been dreaming of this Contax for a long time, and when the opportunity presented itself, I was strangely unable to resist.

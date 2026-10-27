@@ -11,6 +11,8 @@ labels:
 cover: /img/dscf9029.jpg
 excerpt: A super wide-angle with great performance, but with a bulky neighbor and an undeserved reputation
 permalink: /post/45mm-pentax-6x7-a-great-lens-with-a-bigger-neighbor.html
+floor: workshop
+image: /img/house-g-pentax45.jpg
 ---
 
 The Pentax 6x7 lens series has been the flagship of the Japanese house for over 50 years. The first company to invest in 6x7, a format that combined the aspect ratio of the optical bench and the portability of the medium format, the 45mm is the widest-angle lens ever produced for it. Actually, there would also be a 35mm, but it is a fisheye, which, therefore, we are not going to analyze.

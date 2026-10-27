@@ -7,6 +7,7 @@ author: Davide Caniatti
 cover: /img/copertina.jpg
 excerpt: The G series of rangefinder camera lenses created by Carl Zeiss in the 1990s is universally considered one of the best creations of the turn of the century, an absolute swan song for film. However, among so many lenses acclaimed by the public and critics like the 45mm Planar, there has always been a caveat. The 35mm, introduced later for the updated Contax G1 \_green label\_, was immediately judged too soft and inferior to the rest of the kit.
 permalink: /post/contax-g-35mm-planar-an-undeserved-bad-reputation.html
+floor: workshop
 ---
 
 The G series of rangefinder camera lenses created by Carl Zeiss in the 1990s is universally considered one of the best creations of the turn of the century, an absolute swan song for film. However, among so many lenses acclaimed by the public and critics like the 45mm Planar, there has always been a caveat. The 35mm, introduced later for the updated Contax G1 *green label*, was immediately judged too soft and inferior to the rest of the kit.

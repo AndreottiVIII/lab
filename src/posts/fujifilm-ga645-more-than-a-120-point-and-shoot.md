@@ -11,6 +11,7 @@ labels:
 - Medium Format
 excerpt: Often called - wrongly - a portrait machine, this is an ideal companion for travel and excursions
 permalink: /post/fujifilm-ga645-more-than-a-120-point-and-shoot.html
+floor: workshop
 ---
 
 We usually associate medium format with the word “professional”. This equation is historically accurate: the 135 format was reserved for amateurs and photojournalists, with surprising overlaps between these two categories. The point & shoots then were totally a consumer product dedicated to enthusiasts, but not too advanced. So seeing a point & shoot in 645 format, with the word “professional” on it, creates a bit of an oxymoron. Is it possible to make these different souls coexist? In my opinion, yes, and this little Fujifilm masterpiece dated 1995 could be proof of that.

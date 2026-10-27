@@ -6,6 +6,7 @@ const path = require("path");
 const MarkdownIt = require("markdown-it");
 const sharp = require("sharp");
 const build = require("./src/_data/build.js");
+const house = require("./lib/house.js");
 
 const SRC_IMG = path.join(__dirname, "src", "img");
 const WIDTHS = [480, 960, 1600];
@@ -50,6 +51,32 @@ module.exports = async function (eleventyConfig) {
   };
   eleventyConfig.addCollection("tagList", (api) => group(api, "labels"));
   eleventyConfig.addCollection("categoryList", (api) => group(api, "categories"));
+
+  // ---------- La casa in sezione (home e pagine dei piani) ----------
+  // Un solo elenco di contenuti (articoli, gallerie, progetti) con gli stessi campi; lib/house.js decide
+  // quali stanno nei posti del disegno e quali solo nella legenda. Niente e' scritto a mano nel disegno.
+  const cleanUrl = (u) => {
+    const x = String(u).replace(/\.html$/, "");
+    return x === "/index" || x === "" ? "/" : x;
+  };
+  eleventyConfig.addCollection("house", (api) => {
+    const items = [];
+    for (const p of api.getFilteredByGlob("src/posts/*.md")) {
+      if (p.data.duplicate_of) continue; // la copia dello stesso articolo non compare
+      items.push(house.toItem("post", p.data, cleanUrl(p.url), false, p.date, SRC_IMG));
+    }
+    for (const p of api.getFilteredByGlob("src/galleries/*.md")) {
+      const d = { ...p.data };
+      if (!d.image && Array.isArray(d.gallery) && d.gallery[0]) d.image = d.gallery[0].image;
+      items.push(house.toItem("gallery", d, cleanUrl(p.url), false, null, SRC_IMG));
+    }
+    for (const p of api.getFilteredByGlob("src/projects/*.md")) {
+      const ext = /^https?:/.test(p.data.url || "");
+      items.push(house.toItem("project", p.data, p.data.url, ext, p.data.date ? p.date : null, SRC_IMG));
+    }
+    return house.build(items);
+  });
+  eleventyConfig.addShortcode("houseDrawing", (h) => house.drawing(h));
 
   // ---------- Filtri ----------
   // Nome etichetta -> URL come lo scriveva Squarespace: spazio = "+", "&" = "%26"

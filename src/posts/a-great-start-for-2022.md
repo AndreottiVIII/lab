@@ -10,6 +10,7 @@ labels:
 cover: /img/whatsapp-image-2022-02-14-at-142703.jpg
 excerpt: Our darkroom is finally open for business!
 permalink: /post/a-great-start-for-2022.html
+floor: writing
 ---
 
 If this article leaves you a bit confused it is because it is slightly different from the rest of this site. Despite the word "blog", I have tried more or less carefully to not talk too much about myself inside. Not that the topic may not be interesting, but because it is something I already indulge in too often. So I would like to talk about what we have been doing with a dear friend of mine.. Having my darkroom has been a dream of mine ever since I started printing a little something back in 2019. Firstly, I think of printing as a necessary component of analog photography, and secondly because I am against spending money to rent one.

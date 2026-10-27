@@ -10,6 +10,8 @@ author: Davide Caniatti
 cover: /img/dscf0462.jpg
 excerpt: The 90s were undoubtedly the golden age of point & shoots. Innovations in the optical field, such as the introduction of AF and the help of electronics, helped create iconic camera bodies that remain popular today. Among them is the Contax TVS.
 permalink: /post/contax-tvs-a-little-zoom-in-a-luxury-case.html
+floor: workshop
+image: /img/house-g-tvs.jpg
 ---
 
 The 90s were undoubtedly the golden age of point & shoots. Innovations in the optical field, such as the introduction of AF and the help of electronics, helped create iconic camera bodies that remain popular today. Among them is the Contax TVS. The German-Japanese brand took full advantage of this trend, producing many popular models such as the T2 and the TVS. With the advent of digital, these camera bodies were among the first to disappear, as they were intended for wealthy amateurs who went digital before professionals. To understand this camera well, we must understand who it was intended for. This model cost $1,100 at release in 1994, equivalent to $2,000 today! It was aimed at a very wealthy audience with an exclusive object featuring a very refined design. Today, its specifications on paper might make us raise an eyebrow: the zoom has a limited range and does not seem very bright. We will therefore try to understand what this camera can offer today and if it is still used almost 27 years later.

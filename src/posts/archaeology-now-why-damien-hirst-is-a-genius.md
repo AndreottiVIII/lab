@@ -11,6 +11,10 @@ labels:
 cover: /img/rsz-sdim0921-2.jpg
 excerpt: How to try to reconcile us and the ancients in the contemporary world
 permalink: /post/archaeology-now-why-damien-hirst-is-a-genius.html
+floor: writing
+featured: true
+order: 6
+image: /img/house-w-archaeology.jpg
 ---
 
 This blog is about photography, but not only. Photography is a passion that often does not talk about itself, but dialogues with the subject. It is, for example, our pursuit of interesting and new subjects that pushes us to travel. After observing some images on the web, I decided to visit Damien Hirst's ["Archaeology Now"](https://galleriaborghese.beniculturali.it/en/exhibition/damien-hirst/)  exhibition at the Borghese Gallery in Rome. Needless to say, I liked it a lot, and I would like to take this opportunity to tell my two readers why.

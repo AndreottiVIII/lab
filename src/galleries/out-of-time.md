@@ -52,4 +52,8 @@ gallery:
   alt: 'A storage warehouse with shelves filled with stone artifacts, statues, and architectural fragments. In the foreground, there is a tall stone slab with Latin inscriptions and a carved relief at the top. The warehouse has a yellow arched ceiling and a '
 - image: /img/ied2022-61.jpg
   alt: Bronze sculpture of a winged woman, possibly an angel, on a white pedestal, with scaffolding nearby, in an indoor setting with brick walls.
+floor: photography
+featured: true
+order: 2
+image: /img/house-outoftime.jpg
 ---

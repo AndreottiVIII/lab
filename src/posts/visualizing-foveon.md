@@ -11,6 +11,7 @@ labels:
 - Foveon
 excerpt: How RawDigger can help us better understand what Foveon is and why it's so good
 permalink: /post/visualizing-foveon.html
+floor: workshop
 ---
 
 Foveon is undoubtedly a fascinating technology. In an era characterized by the invasion of camera AI and the return to film, this technology seems capable of combining the best of digital and analog. It retains the authenticity of analog, while from digital it inherits the low environmental and economic costs of management. But, what is Foveon?

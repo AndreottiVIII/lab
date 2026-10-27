@@ -12,6 +12,8 @@ author: Davide Caniatti
 cover: /img/dsf4100.jpg
 excerpt: 'Contax G1 cameras come in two versions: silver label (or “white label”) and green label. The original version is the white label, while the green label was introduced later to support new lenses: the 21mm and 35mm. Previously, it was possible to update the first version, but this service is no longer available. However, by following the Contax G2 repair manual and some blog posts, you can do it yourself. If unsure about a step, turn off the camera and start again.'
 permalink: /post/contax-g1-silver-label-conversion-to-green-label.html
+floor: workshop
+image: /img/house-g-g1.jpg
 ---
 
 Contax G1 cameras come in two versions: *silver label* (also called sometimes “white labels”) and *green label*. The white label version s the original one, while the green one was introduced a couple of years later to support the new lenses: the 21mm and the 35mm.

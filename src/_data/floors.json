@@ -1,0 +1,46 @@
+[
+  {
+    "key": "projects",
+    "name": "Projects",
+    "room": "Greenhouse",
+    "roomNote": "projects, still growing",
+    "level": "+8.70",
+    "url": "/projects",
+    "sort": "order",
+    "description": "AI and data projects by Davide Caniatti: parliament trackers, Voynich, Lexodus and Grand Strategy.",
+    "blurb": "AI and data: things that are still growing."
+  },
+  {
+    "key": "writing",
+    "name": "Writing",
+    "room": "Study",
+    "roomNote": "writing",
+    "level": "+4.20",
+    "url": "/writing",
+    "sort": "date",
+    "description": "Davide Caniatti writes about exhibitions, art, Milan and personal notes.",
+    "blurb": "Exhibitions, art, Milan, and notes to self."
+  },
+  {
+    "key": "workshop",
+    "name": "Workshop",
+    "room": "Workshop",
+    "roomNote": "cameras, lenses, film",
+    "level": "±0.00",
+    "url": "/workshop",
+    "sort": "date",
+    "description": "Cameras, lenses, film, paper and sensors, tested and written about by Davide Caniatti.",
+    "blurb": "Cameras, lenses, film, paper and sensors."
+  },
+  {
+    "key": "photography",
+    "name": "Photography",
+    "room": "Darkroom",
+    "roomNote": "no windows · safelight only",
+    "level": "−3.60",
+    "url": "/photography",
+    "sort": "order",
+    "description": "The photography portfolio of Davide Caniatti: portrait, out of time, still life, corporate and Milano Lockdown.",
+    "blurb": "The portfolio: five galleries."
+  }
+]

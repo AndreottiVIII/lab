@@ -7,6 +7,10 @@ author: Davide Caniatti
 cover: /img/dsc06518.jpg
 excerpt: ''
 permalink: /post/contax-hologon-16mm-story-and-black-and-white.html
+floor: workshop
+featured: true
+order: 2
+image: /img/house-g-hologon.jpg
 ---
 
 ![A pristine Contax Hologon 8/16 T*](/img/dsc06518.jpg)

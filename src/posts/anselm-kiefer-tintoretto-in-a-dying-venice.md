@@ -12,6 +12,10 @@ author: Davide Caniatti
 cover: /img/rsz-1dscf2701-pano-3.jpg
 excerpt: Questi scritti, quando verranno bruciati, daranno finalmente un po' di luce is the show of the year, because it understands Venice. Explore Anselm Kiefer's unique fusion of painting and sculpture at Palazzo Ducale, Venice. His monumental work for the city's 1600th year defies decay, celebrating history through ruins and rebirth.
 permalink: /post/anselm-kiefer-tintoretto-in-a-dying-venice.html
+floor: writing
+featured: true
+order: 3
+image: /img/house-w-kiefer.jpg
 ---
 
 ![](/img/rsz-1dscf2701-pano-3-df6944.jpg)

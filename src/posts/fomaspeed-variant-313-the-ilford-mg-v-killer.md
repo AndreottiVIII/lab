@@ -8,6 +8,9 @@ labels:
 - Paper
 excerpt: First approach with the Fomaspeed Variant 313 and comparison with Ilford MGV pearl
 permalink: /post/fomaspeed-variant-313-the-ilford-mg-v-killer.html
+floor: workshop
+order: 10
+short: Fomaspeed 313
 ---
 
 Often on the Internet, resin coated papers live in the shadow of the myth of fiber based ones: it is said that they are good only for learning or for spending less. There is a grain of truth in that, but with modern products, the difference in quality has narrowed a lot: now RC papers can reach a considerable maximum density, and the processing of polyethylene has reached a point where the surfaces, although not comparable to paper, are perfectly credible.

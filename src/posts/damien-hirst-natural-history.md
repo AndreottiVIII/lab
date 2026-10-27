@@ -13,6 +13,10 @@ author: Davide Caniatti
 cover: /img/dscf4629.jpg
 excerpt: An exhibition that summarizes Hirst's most famous works, capable of unsettling the spectator even after almost 30 years.
 permalink: /post/damien-hirst-natural-history.html
+floor: writing
+featured: true
+order: 4
+image: /img/house-w-hirst.jpg
 ---
 
 ### An exhibition that summarizes Hirst's most famous works, capable of unsettling the spectator even after almost 30 years.
