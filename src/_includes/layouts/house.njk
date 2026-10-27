@@ -14,7 +14,7 @@ house: true
     <p class="intro">Scroll down the house, from the greenhouse to the darkroom. <em>Every number is something to open.</em></p>
     {%- for f in H.floors %}
     <section class="fl{% if f.key == 'photography' %} dark{% endif %}" id="{{ f.key }}">
-      <div class="h"><b>{{ f.room }}</b><span>{{ f.level }}</span></div>
+      <div class="h"><b>{{ f.room }}</b></div>
       <h2><a href="{{ f.url }}">{{ f.name }} <small>enter →</small></a></h2>
       {% include "legend-list.njk" %}
     </section>
@@ -33,8 +33,8 @@ house: true
       <p class="intro">One floor for each thing I do. <em>Every number is something to open.</em></p>
     </section>
     {%- for f in H.floors %}
-    <section class="pfloor{% if f.key == 'photography' %} dark{% endif %}" id="floor-{{ f.key }}" data-lv="{{ f.level }} {{ f.bandNote }}">
-      <div class="fh"><span class="lv">▽ {{ f.level }}</span><b>{{ f.room }}</b><a href="{{ f.url }}">enter →</a></div>
+    <section class="pfloor{% if f.key == 'photography' %} dark{% endif %}" id="floor-{{ f.key }}" data-lv="{{ f.room | lower }}">
+      <div class="fh"><b>{{ f.room }}</b><a href="{{ f.url }}">enter →</a></div>
       <h2><a href="{{ f.url }}">{{ f.name }}</a></h2>
       {% houseFloor H, f.key %}
       <div class="fl-list">

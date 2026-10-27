@@ -173,7 +173,6 @@ main { display: block; }
   .hh nav { width: 100%; justify-content: space-between; gap: 6px; }
   .hh nav a { align-items: flex-start; font-size: 13.5px; }
   .hh nav a span { font-size: 9.5px; }
-  .hh nav a span em { display: none; }
   .sheet { padding-top: 14px; }
   .title { font-size: 10px; }
   .key .intro { font-size: 21px; margin-bottom: 16px; }
@@ -206,7 +205,6 @@ main { display: block; }
   .hh.is-home .fl-link { display: none; }
   .hh.is-home nav { width: auto; }
   .hh.is-home nav a { align-items: flex-end; }
-  .hh.is-home .logo small .more { display: none; }
 
   .cover { container-type: inline-size; margin-top: 12px; }
   .cover .title { display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .06em; margin-bottom: 4px; }
@@ -216,24 +214,21 @@ main { display: block; }
   .cover .objs { pointer-events: none; }
   .band { position: absolute; left: 0; right: 0; display: flex; justify-content: flex-end; align-items: center; border-top: 1px dashed var(--dash); }
   .band .lab { display: block; width: calc(36cqw + 6px); padding-left: 12px; border-left: 1.5px solid var(--ink); }
-  .band .lv { display: block; font: 600 11.5px "Overpass Mono", monospace; }
   .band b { display: block; font-weight: 500; font-size: clamp(19px, 5.4cqw, 34px); line-height: 1.05; margin: 1px 0 2px; }
   .band .note { display: block; font-size: 12.5px; color: var(--mute); }
   .band .go { position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 300; }
   .band:hover, .band:active { background: rgba(26, 26, 26, .04); }
-  .band.k-photography .lv, .band.k-photography b { color: var(--red); }
+  .band.k-photography b { color: var(--red); }
   .cover .hint { font: 400 11px "Overpass Mono", monospace; color: var(--mute); text-align: center; border-top: 1.5px solid var(--ink); padding-top: 10px; margin-top: 6px; }
   .cover .intro { font-weight: 300; font-size: 20px; line-height: 1.2; padding: 12px 0 0; }
   .cover .intro em { color: var(--mute); }
 
   .pfloor { padding-top: 26px; scroll-margin-top: 8px; }
   .pfloor .fh { display: flex; justify-content: space-between; align-items: baseline; border-top: 1.5px solid var(--ink); padding-top: 10px; margin-bottom: 8px; }
-  .pfloor .fh .lv { font: 600 13px "Overpass Mono", monospace; }
   .pfloor .fh b { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
   .pfloor .fh a { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 8px 0 8px 8px; margin: -8px 0; }
   .pfloor h2 { font-weight: 500; font-size: 30px; line-height: 1; margin: 0 0 10px; }
   .pfloor.dark .fh { border-top-color: var(--dark); }
-  .pfloor.dark .fh .lv { color: var(--red); }
 
   .fwrap { position: relative; container-type: inline-size; width: 100%; }
   .fwrap .art-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }

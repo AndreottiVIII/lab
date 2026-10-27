@@ -16,7 +16,7 @@ eleventyComputed:
 <div class="wrap floor-page floor-{{ floor.key }}">
   <div class="title mono"><span>FLOOR PLAN · SECTION A–A</span><span>SCALE 1:50</span></div>
   <header class="fl-head">
-    <div class="h"><b>{{ floor.room }}</b><span>{{ floor.level }}</span></div>
+    <div class="h"><b>{{ floor.room }}</b></div>
     <h1>{{ floor.name }}</h1>
     <p class="blurb">{{ floor.blurb }}</p>
     <p class="count mono">{{ F.count }} {{ 'item' if F.count == 1 else 'items' }}</p>
@@ -38,8 +38,8 @@ eleventyComputed:
   <p class="empty">Nothing here yet.</p>
   {%- endif %}
   <nav class="stairs" aria-label="Other floors">
-    {%- if i > 0 %}<a class="up" href="{{ floors[i - 1].url }}">↑ {{ floors[i - 1].name }} <span class="mono">{{ floors[i - 1].level }}</span></a>{% endif %}
+    {%- if i > 0 %}<a class="up" href="{{ floors[i - 1].url }}">↑ {{ floors[i - 1].name }}</a>{% endif %}
     <a class="house" href="/">The whole house</a>
-    {%- if i < floors.length - 1 %}<a class="down" href="{{ floors[i + 1].url }}">↓ {{ floors[i + 1].name }} <span class="mono">{{ floors[i + 1].level }}</span></a>{% endif %}
+    {%- if i < floors.length - 1 %}<a class="down" href="{{ floors[i + 1].url }}">↓ {{ floors[i + 1].name }}</a>{% endif %}
   </nav>
 </div>
