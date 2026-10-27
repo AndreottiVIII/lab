@@ -103,9 +103,13 @@ Campi in più nel frontmatter di articoli, gallerie e progetti (tutti facoltativ
 - `featured: true` — merita un posto nel disegno.
 - `order` — numero: ordine tra i contenuti in evidenza (1 = primo posto).
 - `image` — foto per il disegno (se manca si usa `cover`; se manca anche quella, il posto resta tratteggiato).
-- `short` — nome corto per le targhette dell'officina (articoli).
+- `short` — nome corto per l'elenco "On the pegboard" (articoli); `plate` — scritta sulla targhetta (al massimo 10 lettere, se manca si usa `short`).
 - `lang: it` — mostra l'etichetta IT; `tag` — scritta al posto della foto (progetti senza schermata, es. PAPER).
 
 Le stanze hanno posti fissi: serra 6, studiolo 8, banco dell'officina 5, filo della cantina 5. Si riempiono con i `featured` (poi `order`, poi i più recenti); se non ce ne sono abbastanza si prendono i più recenti. Quello che non entra finisce **solo nella legenda**: in officina diventa una targhetta sul pannello forato (fino a 5, tutte sotto un solo numero), il resto è la riga "and N more →" che porta alla pagina del piano. I numeri cerchiati e la legenda si generano da soli, dall'alto in basso. Il codice sta in `lib/house.js` (posti, numeri, disegno), `src/_includes/layouts/house.njk` (legenda), `src/floors.njk` (pagine dei piani), `src/assets/css/house.css` e `src/assets/js/house.js`.
 
 **Cantina:** le stampe sul filo arrivano in negativo e si sviluppano (2-3 secondi) al passaggio del mouse, al tocco, con la tastiera o, da telefono, quando scorrono nello schermo. Si ricordano in `localStorage` (`dc-developed`); con `prefers-reduced-motion` la transizione è breve.
+
+**Colori:** sono tre variabili in cima a `src/assets/css/house.css` (`--paper` fondo, `--peg` pannello forato, `--mute` testi grigi). Il disegno (`lib/art.js`) le legge dalle classi `.pp`, `.pg`, `.mu`: si cambiano lì e cambia tutta la casa. Oggi: fondo bianco `#ffffff`, pannello `#efefed`, grigi `#76736c`; la cantina resta rossa.
+
+**Telefono (sotto i 768 px):** la home mostra la copertina (la casa intera con le quattro fasce da toccare, allineate ai piani) e sotto i quattro piani ingranditi a tutta larghezza, ognuno con la sua legenda; un segnapiano fisso ("you are here") segue il piano che si guarda. Il disegno fisso sta in un solo punto (`lib/art.js`, definito una volta nella pagina e richiamato con `<use>`): computer, copertina e piani sono tre viste degli stessi dati (`drawing()`, `cover()`, `floor()` in `lib/house.js`).

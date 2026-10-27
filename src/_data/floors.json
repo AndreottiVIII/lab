@@ -1,6 +1,7 @@
 [
   {
     "key": "projects",
+    "bandNote": "greenhouse",
     "name": "Projects",
     "room": "Greenhouse",
     "roomNote": "projects, still growing",
@@ -12,6 +13,7 @@
   },
   {
     "key": "writing",
+    "bandNote": "study",
     "name": "Writing",
     "room": "Study",
     "roomNote": "writing",
@@ -23,6 +25,7 @@
   },
   {
     "key": "workshop",
+    "bandNote": "cameras & lenses",
     "name": "Workshop",
     "room": "Workshop",
     "roomNote": "cameras, lenses, film",
@@ -34,6 +37,7 @@
   },
   {
     "key": "photography",
+    "bandNote": "darkroom",
     "name": "Photography",
     "room": "Darkroom",
     "roomNote": "no windows · safelight only",

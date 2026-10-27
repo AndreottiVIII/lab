@@ -4,7 +4,8 @@ house: true
 ---
 {%- set H = collections.house -%}
 <script>if(location.pathname==='{{ '/index' | url }}')location.replace('{{ '/blog-index' | url }}');</script>
-<div class="wrap sheet">
+{% houseDefs H %}
+<div class="wrap sheet desk">
   <div class="draw">
     <div class="title mono"><span>SECTION A–A</span><span>SCALE 1:50</span></div>
     {% houseDrawing H %}
@@ -15,21 +16,42 @@ house: true
     <section class="fl{% if f.key == 'photography' %} dark{% endif %}" id="{{ f.key }}">
       <div class="h"><b>{{ f.room }}</b><span>{{ f.level }}</span></div>
       <h2><a href="{{ f.url }}">{{ f.name }} <small>enter →</small></a></h2>
-      <ol>
-        {%- for it in f.shown %}
-        <li{% if it.dev %} data-dev-for="{{ it.dev }}"{% endif %}><i>{{ it.n }}</i><a href="{{ it.url }}">{{ it.title }}</a>{% if it.lang == 'it' %} <span class="it">IT</span>{% endif %}</li>
-        {%- endfor %}
-        {%- if f.pegN %}
-        <li class="peg"><i>{{ f.pegN }}</i>On the pegboard: {% for p in f.pegItems %}<a href="{{ p.url }}">{{ p.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if f.more %} and <a href="{{ f.url }}">{{ f.more }} more →</a>{% endif %}</li>
-        {%- elif f.more %}
-        <li class="more"><a href="{{ f.url }}">and {{ f.more }} more →</a></li>
-        {%- endif %}
-        {%- if not f.count %}
-        <li class="empty">Nothing here yet.</li>
-        {%- endif %}
-      </ol>
+      {% include "legend-list.njk" %}
     </section>
     {%- endfor %}
     <div class="block"><div><b>Davide Caniatti</b>drawing</div><div><b>A–A</b>section</div><div><b>1:50</b>scale</div><div><b>Milan</b>place</div><a href="/contact-davidecaniatti"><b>About</b>contact</a><div><b>01</b>sheet</div></div>
   </aside>
 </div>
+
+{#- Telefono (sotto i 768 px): la copertina con le quattro fasce, poi i piani ingranditi, uno dopo l'altro, ognuno con la sua legenda -#}
+<div class="phone">
+  <div class="wrap">
+    <section class="cover" aria-label="The house, floor by floor">
+      <div class="title mono"><span>SECTION A–A · 1:50</span><span>tap a floor</span></div>
+      {% houseCover H %}
+      <p class="hint mono">tap a floor to go down to it</p>
+      <p class="intro">One floor for each thing I do. <em>Every number is something to open.</em></p>
+    </section>
+    {%- for f in H.floors %}
+    <section class="pfloor{% if f.key == 'photography' %} dark{% endif %}" id="floor-{{ f.key }}" data-lv="{{ f.level }} {{ f.bandNote }}">
+      <div class="fh"><span class="lv">▽ {{ f.level }}</span><b>{{ f.room }}</b><a href="{{ f.url }}">enter →</a></div>
+      <h2><a href="{{ f.url }}">{{ f.name }}</a></h2>
+      {% houseFloor H, f.key %}
+      <div class="fl-list">
+      {% include "legend-list.njk" %}
+      </div>
+    </section>
+    {%- endfor %}
+    <div class="block"><div><b>Davide Caniatti</b>drawing</div><div><b>A–A</b>section</div><div><b>1:50</b>scale</div><div><b>Milan</b>place</div><a href="/contact-davidecaniatti"><b>About</b>contact</a><div><b>01</b>sheet</div></div>
+  </div>
+  <a class="here" href="#page" aria-label="Back to the top of the house" hidden>
+    <svg viewBox="0 0 34 56" aria-hidden="true"><path d="M3 15 L17 2 L31 15" fill="none" stroke="#1a1a1a" stroke-width="1.4"/>
+      <rect id="h0" x="3" y="15" width="28" height="9" fill="none" stroke="#1a1a1a"/>
+      <rect id="h1" x="3" y="24" width="28" height="10" fill="none" stroke="#1a1a1a"/>
+      <rect id="h2" x="3" y="34" width="28" height="10" fill="none" stroke="#1a1a1a"/>
+      <rect id="h3" x="3" y="44" width="28" height="10" fill="none" stroke="#1a1a1a" class="d"/>
+      <line x1="0" y1="44" x2="34" y2="44" stroke="#1a1a1a" stroke-width="1.6"/></svg>
+    <span class="t">you are here<b id="hl"></b></span>
+  </a>
+</div>
+{% houseRemember %}

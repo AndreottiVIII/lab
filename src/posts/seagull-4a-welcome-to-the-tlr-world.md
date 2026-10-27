@@ -15,6 +15,7 @@ permalink: /post/seagull-4a-welcome-to-the-tlr-world.html
 floor: workshop
 order: 8
 short: Seagull 4A
+plate: Seagull 4A
 ---
 
 The twins lens reflex cameras (tlr) are undoubtedly cameras of the past, but still of great charm and rediscovered use. The possibility of having the quality of the medium format with a contained weight and dimensions made them popular around the middle of the last century. These qualities are still appreciated by photographers today, so much so that we are witnessing a real renaissance of TLRs. As evidence of this, we find a general increase in prices, with several Rolleiflex models now unapproachable.

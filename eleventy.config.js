@@ -77,6 +77,10 @@ module.exports = async function (eleventyConfig) {
     return house.build(items);
   });
   eleventyConfig.addShortcode("houseDrawing", (h) => house.drawing(h));
+  eleventyConfig.addShortcode("houseDefs", (h) => house.defs(h));
+  eleventyConfig.addShortcode("houseCover", (h) => house.cover(h));
+  eleventyConfig.addShortcode("houseFloor", (h, key) => house.floor(h, key));
+  eleventyConfig.addShortcode("houseRemember", () => house.remember());
 
   // ---------- Filtri ----------
   // Nome etichetta -> URL come lo scriveva Squarespace: spazio = "+", "&" = "%26"

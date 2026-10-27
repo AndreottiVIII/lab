@@ -13,6 +13,7 @@ permalink: /post/kodak-gold-200-120-did-we-need-it.html
 floor: workshop
 order: 9
 short: Kodak Gold 200
+plate: Gold 200
 ---
 
 News of a new film should be good news in itself. I use the conditional as today's announcement by [Kodak to market the Gold 200 in 120 format](https://emulsive.org/articles/news/25-cheaper-than-both-portra-and-ektar-the-return-of-kodak-gold-200-film-in-120-format?fbclid=IwAR2AtyNGOhTvejmL0DvaPYHy_QzKsEYqcYQ7CK36_YDGY6VvsSnCofyssN4) leaves me at most tepid. We have come from difficult years for analog photography, with many beloved films being discontinued. Let's think, for example, of the Fuji 400H which, with its disappearance, has thrown into a panic wedding practitioners all over the world. Even Kodak hadn't offered any new emulsions in years, and ideally, a medium format film at 200 ISO should be welcomed as something good. However, a little bitterness remains, which I will try to explain.

@@ -1,0 +1,13 @@
+<ol>
+  {%- for it in f.shown %}
+  <li{% if it.dev %} data-dev-for="{{ it.dev }}"{% endif %}><i>{{ it.n }}</i><a href="{{ it.url }}">{{ it.title }}</a>{% if it.lang == 'it' %} <span class="it">IT</span>{% endif %}</li>
+  {%- endfor %}
+  {%- if f.pegN %}
+  <li class="peg"><i>{{ f.pegN }}</i>On the pegboard: {% for p in f.pegItems %}<a href="{{ p.url }}">{{ p.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% if f.more %} and <a href="{{ f.url }}">{{ f.more }} more →</a>{% endif %}</li>
+  {%- elif f.more %}
+  <li class="more"><a href="{{ f.url }}">and {{ f.more }} more →</a></li>
+  {%- endif %}
+  {%- if not f.count %}
+  <li class="empty">Nothing here yet.</li>
+  {%- endif %}
+</ol>

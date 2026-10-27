@@ -1,10 +1,10 @@
 {%- set here = page.url | cleanUrl -%}
-<header class="hh wrap">
+<header class="hh wrap{% if here == '/' %} is-home{% endif %}">
   {%- if build.lab %}<span class="lab-badge" title="Laboratorio: non è il sito vero">LAB</span>{% endif %}
-  {% if here == '/' %}<h1 class="logo">Davide Caniatti<small>A HOUSE IN SECTION · ONE FLOOR FOR EACH THING I DO</small></h1>{% else %}<a class="logo" href="/">Davide Caniatti<small>A HOUSE IN SECTION · ONE FLOOR FOR EACH THING I DO</small></a>{% endif %}
+  {% if here == '/' %}<h1 class="logo">Davide Caniatti<small>A HOUSE IN SECTION<span class="more"> · ONE FLOOR FOR EACH THING I DO</span></small></h1>{% else %}<a class="logo" href="/">Davide Caniatti<small>A HOUSE IN SECTION<span class="more"> · ONE FLOOR FOR EACH THING I DO</span></small></a>{% endif %}
   <nav aria-label="Main">
     {%- for f in floors %}
-    <a class="k-{{ f.key }}" href="{{ f.url }}"{% if here == f.url %} aria-current="page"{% endif %}>{{ f.name }}<span><b>{{ f.level }}</b><em> {{ f.room | lower }}</em></span></a>
+    <a class="fl-link k-{{ f.key }}" href="{{ f.url }}"{% if here == f.url %} aria-current="page"{% endif %}>{{ f.name }}<span><b>{{ f.level }}</b><em> {{ f.room | lower }}</em></span></a>
     {%- endfor %}
     <a class="k-about" href="/contact-davidecaniatti"{% if here == '/contact-davidecaniatti' %} aria-current="page"{% endif %}>About<span><em>contact</em></span></a>
   </nav>
