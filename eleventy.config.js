@@ -7,6 +7,7 @@ const MarkdownIt = require("markdown-it");
 const sharp = require("sharp");
 const build = require("./src/_data/build.js");
 const house = require("./lib/house.js");
+const letters = require("./src/_data/letters.json");
 
 const SRC_IMG = path.join(__dirname, "src", "img");
 const WIDTHS = [480, 960, 1600];
@@ -74,7 +75,7 @@ module.exports = async function (eleventyConfig) {
       const ext = /^https?:/.test(p.data.url || "");
       items.push(house.toItem("project", p.data, p.data.url, ext, p.data.date ? p.date : null, SRC_IMG));
     }
-    return house.build(items);
+    return house.build(items, letters);
   });
   eleventyConfig.addShortcode("houseDrawing", (h) => house.drawing(h));
   eleventyConfig.addShortcode("houseDefs", (h) => house.defs(h));

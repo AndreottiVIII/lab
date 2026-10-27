@@ -10,6 +10,10 @@
   var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* i piccioni della piccionaia (Letters) si muovono pianissimo; con prefers-reduced-motion restano fermi */
+  var defs = document.querySelector('.art-defs');
+  if (reduce && defs) { try { defs.pauseAnimations(); [].slice.call(defs.querySelectorAll('animateTransform')).forEach(function (a) { a.parentNode.removeChild(a); }); } catch (e) {} }
+
   /* ---------------- sviluppo ---------------- */
   var KEY = 'dc-developed';
   var prints = $$('[data-dev]');

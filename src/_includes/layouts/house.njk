@@ -18,6 +18,14 @@ house: true
       <h2><a href="{{ f.url }}">{{ f.name }} <small>enter →</small></a></h2>
       {% include "legend-list.njk" %}
     </section>
+    {%- if f.key == 'projects' and H.letters %}
+    <section class="fl lt-sec" id="letters">
+      <div class="h"><b>Dovecote</b></div>
+      <h2><a href="{{ letters.url }}" target="_blank" rel="noopener">{{ letters.label }} <small>open ↗</small></a></h2>
+      <ol><li><i>L</i><a href="{{ letters.url }}" target="_blank" rel="noopener">My letters on Substack: letters leave the roof by carrier pigeon</a></li></ol>
+      {%- if letters.latest %}<p class="ph">latest: <b>{{ letters.latest }}</b></p>{% endif %}
+    </section>
+    {%- endif %}
     {%- endfor %}
     <div class="block"><div><b>Davide Caniatti</b>drawing</div><div><b>A–A</b>section</div><div><b>1:50</b>scale</div><div><b>Milan</b>place</div><a href="/contact-davidecaniatti"><b>About</b>contact</a><div><b>01</b>sheet</div></div>
   </aside>
@@ -29,6 +37,9 @@ house: true
     <section class="cover" aria-label="The house, floor by floor">
       <div class="title mono"><span>SECTION A–A · 1:50</span><span>tap a floor</span></div>
       {% houseCover H %}
+      {%- if H.letters %}
+      <a class="lt-row lt-link" href="{{ letters.url }}" target="_blank" rel="noopener"><i>L</i><span><b>{{ letters.label }}</b><br>dovecote · on Substack</span><em aria-hidden="true">↗</em></a>
+      {%- endif %}
       <p class="hint mono">tap a floor to go down to it</p>
       <p class="intro">One floor for each thing I do. <em>Every number is something to open.</em></p>
     </section>
@@ -38,6 +49,7 @@ house: true
       <h2><a href="{{ f.url }}">{{ f.name }}</a></h2>
       {% houseFloor H, f.key %}
       <div class="fl-list">
+      {% set withLetters = (f.key == 'projects' and H.letters) %}
       {% include "legend-list.njk" %}
       </div>
     </section>

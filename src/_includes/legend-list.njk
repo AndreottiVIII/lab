@@ -10,4 +10,7 @@
   {%- if not f.count %}
   <li class="empty">Nothing here yet.</li>
   {%- endif %}
+  {%- if withLetters %}
+  <li class="lt-li"><i>L</i><a href="{{ letters.url }}" target="_blank" rel="noopener">{{ letters.label }}, on Substack ↗</a>{% if letters.latest %}<span class="ph">{{ letters.latest }}</span>{% endif %}</li>
+  {%- endif %}
 </ol>

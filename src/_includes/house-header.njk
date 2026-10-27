@@ -6,6 +6,9 @@
     {%- for f in floors %}
     <a class="fl-link k-{{ f.key }}" href="{{ f.url }}"{% if here == f.url %} aria-current="page"{% endif %}>{{ f.name }}<span><em>{{ f.room | lower }}</em></span></a>
     {%- endfor %}
+    {%- if letters.url %}
+    <a class="k-letters" href="{{ letters.url }}" target="_blank" rel="noopener">{{ letters.label }}<span><em>substack ↗</em></span></a>
+    {%- endif %}
     <a class="k-about" href="/contact-davidecaniatti"{% if here == '/contact-davidecaniatti' %} aria-current="page"{% endif %}>About<span><em>contact</em></span></a>
   </nav>
 </header>
