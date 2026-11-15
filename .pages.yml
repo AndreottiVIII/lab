@@ -1,0 +1,238 @@
+# Configurazione di Pages CMS (https://pagescms.org) per davidecaniatti.com
+# Gli stessi file si possono modificare a mano via git: il pannello legge e scrive Markdown + frontmatter.
+
+media:
+  input: src/img
+  output: /img
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
+
+content:
+  # ---------------- Articoli ----------------
+  - name: posts
+    label: Articoli
+    type: collection
+    path: src/posts
+    filename: "{primary}.md"
+    exclude: [posts.11tydata.js]
+    view:
+      fields: [title, date, categories]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+        options:
+          format: yyyy-MM-dd
+        required: true
+      - name: description
+        label: Descrizione per Google (meta description)
+        type: text
+      - name: seo_title
+        label: Titolo per Google (se diverso dal titolo; il sito aggiunge " — Davide Caniatti")
+        type: string
+      - name: labels
+        label: Etichette
+        type: string
+        list: true
+      - name: categories
+        label: Categoria
+        type: string
+        list: true
+        description: "Quelle in uso: Foveon, Cameras, Lenses."
+      - name: author
+        label: Autore (se compare "Written by")
+        type: string
+      - name: cover
+        label: Immagine di copertina (anteprime e condivisioni)
+        type: image
+      - name: floor
+        label: Piano della casa (dove compare nella home)
+        type: select
+        options:
+          values:
+            - { value: writing, label: "Writing (studiolo): mostre, arte, note personali" }
+            - { value: workshop, label: "Workshop (officina): macchine, lenti, pellicole, carte" }
+        description: "Se lo lasci vuoto va in Writing."
+      - name: featured
+        label: In evidenza nel disegno della casa
+        type: boolean
+      - name: order
+        label: Posizione tra quelli in evidenza (1 = primo posto, facoltativo)
+        type: number
+      - name: image
+        label: Foto per il disegno della casa (se vuota si usa la copertina)
+        type: image
+      - name: short
+        label: Nome corto per l'elenco "On the pegboard" (facoltativo)
+        type: string
+      - name: plate
+        label: Scritta sulla targhetta dell'officina (facoltativo, max 10 lettere)
+        type: string
+      - name: excerpt
+        label: Riassunto (usato solo nel feed RSS)
+        type: text
+      - name: permalink
+        label: Indirizzo (lasciare vuoto per gli articoli nuovi; NON cambiarlo per quelli già pubblicati)
+        type: string
+      - name: body
+        label: Testo
+        type: rich-text
+        description: "Una galleria è un elenco puntato di sole immagini. Una didascalia è una riga in corsivo subito sotto un'immagine."
+
+  # ---------------- Gallerie del portfolio ----------------
+  - name: galleries
+    label: Gallerie (Work)
+    type: collection
+    path: src/galleries
+    filename: "{primary}.md"
+    exclude: [galleries.11tydata.js]
+    view:
+      fields: [title]
+      primary: title
+    fields:
+      - name: title
+        label: Titolo della galleria
+        type: string
+        required: true
+      - name: seo_title
+        label: Titolo per Google
+        type: string
+      - name: description
+        label: Descrizione per Google
+        type: text
+      - name: featured
+        label: In evidenza nel disegno della casa (cantina)
+        type: boolean
+      - name: order
+        label: Posizione sul filo della camera oscura (1 = primo)
+        type: number
+      - name: image
+        label: Foto per il disegno della casa
+        type: image
+      - name: permalink
+        label: Indirizzo (non cambiare)
+        type: string
+      - name: gallery
+        label: Foto (nell'ordine in cui compaiono)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Foto
+            type: image
+          - name: alt
+            label: Testo alternativo (per chi non vede la foto)
+            type: text
+
+  - name: projects
+    label: Progetti (Projects, la serra)
+    type: collection
+    path: src/projects
+    filename: "{primary}.md"
+    exclude: [projects.json]
+    view:
+      fields: [title, lang, order]
+      primary: title
+      sort: [order, title]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - { name: title, label: Titolo, type: string, required: true }
+      - { name: description, label: Riga di descrizione, type: text }
+      - { name: url, label: Indirizzo (con https://), type: string, required: true }
+      - name: lang
+        label: Lingua
+        type: select
+        options:
+          values:
+            - { value: en, label: English }
+            - { value: it, label: Italiano (compare l'etichetta IT) }
+      - { name: image, label: Schermata del progetto, type: image }
+      - { name: tag, label: "Scritta al posto della foto (es. PAPER), se non c'e' la schermata", type: string }
+      - { name: featured, label: In evidenza nel disegno della casa, type: boolean }
+      - { name: order, label: Posizione (1 = primo posto), type: number }
+
+  # ---------------- Pagine singole ----------------
+  - name: home
+    label: Home (la casa si disegna da sola dai contenuti)
+    type: file
+    path: src/pages/home.md
+    fields:
+      - { name: seo_title, label: Titolo per Google, type: string }
+      - { name: description, label: Descrizione per Google, type: text }
+
+  - name: about
+    label: About me
+    type: file
+    path: src/pages/contact-davidecaniatti.md
+    fields:
+      - { name: seo_title, label: Titolo per Google, type: string }
+      - { name: description, label: Descrizione per Google, type: text }
+      - { name: image, label: Foto, type: image }
+      - { name: image_alt, label: Testo alternativo della foto, type: text }
+      - { name: body, label: Testo, type: rich-text }
+
+  - name: index
+    label: "Index (elenco automatico; qui solo testi per Google e la foto)"
+    type: file
+    path: src/pages/blog-index.md
+    fields:
+      - { name: seo_title, label: Titolo per Google, type: string }
+      - { name: description, label: Descrizione per Google, type: text }
+      - { name: image, label: Foto, type: image }
+      - { name: image_alt, label: Testo alternativo della foto, type: text }
+
+  - name: letters
+    label: Letters (la piccionaia, Substack)
+    type: file
+    path: src/_data/letters.json
+    format: json
+    fields:
+      - { name: label, label: Nome nel menu e titolo della pagina, type: string }
+      - { name: url, label: Indirizzo del tuo profilo Substack (con https://), type: string, required: true }
+      - name: page
+        label: Indirizzo della pagina sul sito (lascialo /letters)
+        type: string
+      - name: blurb
+        label: Frase sotto il titolo della pagina (in inglese)
+        type: string
+      - name: description
+        label: Descrizione per Google (in inglese, circa 150 caratteri)
+        type: text
+      - name: latest
+        label: Titolo dell'ultima lettera (facoltativo; se lo lasci vuoto la riga non compare)
+        type: string
+      - name: profile
+        label: Scheda del profilo (la prima della pagina, cerchietto L)
+        type: object
+        fields:
+          - { name: title, label: Titolo della scheda, type: string }
+          - { name: note, label: Riga di descrizione (in inglese, minuscola iniziale), type: string }
+          - { name: image, label: Immagine (orizzontale, circa 900 x 563), type: image }
+      - name: also
+        label: Altre pubblicazioni (cerchietto con una lettera; nel disegno ci stanno le prime due)
+        type: object
+        list: true
+        fields:
+          - { name: key, label: Lettera nel cerchietto, type: string }
+          - { name: label, label: Nome, type: string }
+          - { name: url, label: Indirizzo (con https://), type: string }
+          - { name: note, label: Riga di descrizione (in inglese, minuscola iniziale), type: string }
+          - { name: image, label: Immagine della scheda (orizzontale, circa 900 x 563), type: image }
+          - name: lang
+            label: Lingua
+            type: select
+            options:
+              values:
+                - { value: en, label: English }
+                - { value: it, label: Italiano (compare l'etichetta IT) }
