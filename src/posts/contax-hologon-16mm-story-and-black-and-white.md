@@ -1,6 +1,6 @@
 ---
 title: Contax Hologon 16mm - History and black and white samples
-description: ''
+description: "The Contax Hologon 16mm f/8, the widest lens ever made for the Contax G: its history, how it handles and a set of black and white samples."
 date: '2021-05-22'
 labels: []
 author: Davide Caniatti

@@ -9,6 +9,7 @@ eleventyExcludeFromCollections: true
 eleventyComputed:
   headTitle: "{{ tag.name | safe }} — Blog — Davide Caniatti"
   canonical: "{{ tag.name | tagUrl }}"
+  description: "{{ tag | listDesc('tag') | safe }}"
 ---
 {%- set kind = 'tag' -%}
 {%- set activeName = tag.name -%}

@@ -52,6 +52,21 @@ module.exports = async function (eleventyConfig) {
   };
   eleventyConfig.addCollection("tagList", (api) => group(api, "labels"));
   eleventyConfig.addCollection("categoryList", (api) => group(api, "categories"));
+  // descrizione per Google delle pagine di tag e categoria (su Squarespace erano vuote): si aggiorna da sola con gli articoli
+  eleventyConfig.addFilter("listDesc", (g, kind) => {
+    const titles = (g.posts || [])
+      .slice()
+      .sort((a, b) => b.date - a.date)
+      .map((p) => String(p.data.title || "").replace(/\s+/g, " ").trim().replace(/[.\s]+$/, ""))
+      .filter(Boolean);
+    const head = kind === "tag" ? `Articles tagged ${g.name} by Davide Caniatti` : `Articles in ${g.name} by Davide Caniatti`;
+    if (!titles.length) return head + ".";
+    let out = head + ": " + titles[0];
+    let k = 1;
+    while (k < titles.length && (out + ", " + titles[k]).length <= 140) out += ", " + titles[k++];
+    const rest = titles.length - k;
+    return out + (rest ? ` and ${rest} more.` : ".");
+  });
 
   // ---------- La casa in sezione (home e pagine dei piani) ----------
   // Un solo elenco di contenuti (articoli, gallerie, progetti) con gli stessi campi; lib/house.js decide

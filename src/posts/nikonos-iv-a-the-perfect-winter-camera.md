@@ -1,6 +1,6 @@
 ---
 title: 'Nikonos IV-A: the perfect winter camera?'
-description: ''
+description: "Cold, rain and little light: can a camera built for diving be the answer to winter film photography? A look at the Nikonos IV-A."
 date: '2020-12-10'
 labels: []
 author: Davide Caniatti

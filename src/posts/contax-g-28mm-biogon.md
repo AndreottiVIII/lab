@@ -1,6 +1,6 @@
 ---
 title: Contax G 28mm f 2.8 Biogon
-description: ''
+description: "The Contax G 28mm f/2.8 Biogon: a great performer in the G series that rarely gets the praise it deserves. Here is why it is worth a closer look."
 date: '2021-09-30'
 labels: []
 author: Davide Caniatti

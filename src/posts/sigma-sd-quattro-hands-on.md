@@ -1,6 +1,6 @@
 ---
 title: Sigma SD Quattro - hands on
-description: ''
+description: "How the Sigma SD Quattro feels in the hands: a mirrorless that behaves like a DSLR, with its build, controls, strengths and weaknesses."
 date: '2020-12-03'
 labels: []
 author: Davide Caniatti
