@@ -25,6 +25,9 @@ eleventyExcludeFromCollections: true
   {%- if letters.page %}
   <url><loc>{{ origin }}{{ letters.page }}</loc></url>
   {%- endif %}
+  {%- if not build.lab %}
+  <url><loc>{{ origin }}/appalti/</loc></url>
+  {%- endif %}
   <url><loc>{{ origin }}/blog-index</loc></url>
   <url><loc>{{ origin }}/contact-davidecaniatti</loc></url>
 </urlset>

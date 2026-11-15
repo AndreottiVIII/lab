@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appalti pubblici italiani 2019-2025: quattro schemi cercati nei dati aperti ANAC</title>
+<meta name="description" content="34,8 milioni di procedure di acquisto pubblico registrate da ANAC tra il 2019 e il 2025, lette cercando quattro schemi anomali: importi sotto la soglia dell’affidamento diretto, lavori senza fine registrata, gare con un solo offerente, imprese che vincono quasi sempre nello stesso ente. Un’anomalia non è una prova.">
+<meta name="author" content="Davide Caniatti">
+<link rel="canonical" href="https://davidecaniatti.com/appalti/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Appalti pubblici italiani 2019-2025: quattro schemi cercati nei dati aperti ANAC">
+<meta property="og:description" content="Gli importi si addensano sotto la soglia dell’affidamento diretto e la seguono quando la legge la sposta; un lavoro su tre non risulta finito nei dati; un solo offerente dipende da cosa si compra. Un’anomalia non è una prova.">
+<meta property="og:image" content="https://davidecaniatti.com/appalti/grafici/04_lavori_senza_fine_registrata.png">
+<meta property="og:url" content="https://davidecaniatti.com/appalti/">
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  background: #ffffff;
+  color: #2b2b2b;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 0.6rem; color: #1a1a1a; }
+h2 { font-size: 1.35rem; line-height: 1.25; margin: 2.4rem 0 0.8rem; padding-top: 0.6rem; border-top: 2px solid #1a1a1a; color: #1a1a1a; }
+h3 { font-size: 1.05rem; margin: 1.4rem 0 0.4rem; color: #1a1a1a; }
+h4 { font-size: 0.95rem; margin: 0 0 0.5rem; text-transform: uppercase; letter-spacing: 0.04em; color: #1a1a1a; }
+p { margin: 0 0 0.9rem; }
+a { color: #1a4f95; }
+ul, ol { margin: 0 0 0.9rem; padding-left: 1.3rem; }
+li { margin-bottom: 0.4rem; }
+.data { color: #555555; font-size: 0.95rem; margin-bottom: 1.2rem; }
+.sommario { border-left: 4px solid #1a1a1a; padding: 0.1rem 0 0.1rem 1rem; margin: 1.2rem 0 1.4rem; }
+.sommario p { margin-bottom: 0.5rem; }
+.titolo-risultato { font-size: 1.15rem; font-weight: 600; line-height: 1.35; margin: 0 0 1rem; color: #1a1a1a; }
+.f { color: #555555; font-size: 0.85em; }
+figure { margin: 1.2rem 0; padding: 0; break-inside: avoid; page-break-inside: avoid; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid #dddddd; }
+figcaption { font-size: 0.88rem; color: #444444; margin-top: 0.4rem; }
+.riquadro { border: 1px solid #999999; padding: 0.8rem 1rem 0.4rem; margin: 1.1rem 0; break-inside: avoid; page-break-inside: avoid; }
+.riquadro dl { margin: 0; }
+.riquadro dt { font-weight: 700; margin-top: 0.5rem; }
+.riquadro dd { margin: 0 0 0.5rem; }
+.riquadro ul { margin-bottom: 0.5rem; }
+.regge { border-left: 6px solid #1a1a1a; padding-left: 0.7rem; }
+.parte { border-left: 6px double #1a1a1a; padding-left: 0.7rem; }
+.no { border-left: 6px dotted #1a1a1a; padding-left: 0.7rem; }
+.approfondire { border-top: 1px solid #999999; border-bottom: 1px solid #999999; padding: 0.6rem 0; margin: 1.1rem 0; break-inside: avoid; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; margin: 0.8rem 0 1.2rem; }
+th, td { border: 1px solid #bbbbbb; padding: 0.3rem 0.4rem; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+th { background: #f2f2f2; }
+td.n, th.n { text-align: right; }
+code { font-family: ui-monospace, Consolas, "Courier New", monospace; font-size: 0.85em; overflow-wrap: anywhere; }
+footer { margin-top: 2.5rem; font-size: 0.85rem; color: #555555; border-top: 1px solid #bbbbbb; padding-top: 0.8rem; }
+footer p { margin-bottom: 0.6rem; }
+
+@media print {
+  @page { size: A4; margin: 14mm 16mm; }
+  body { padding: 0; font-size: 10pt; line-height: 1.4; }
+  main { max-width: none; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; break-after: avoid; page-break-after: avoid; }
+  h3, h4 { break-after: avoid; page-break-after: avoid; }
+  h2.nuova-pagina { break-before: page; page-break-before: always; margin-top: 0; border-top: 0; padding-top: 0; }
+  figure, .riquadro, .approfondire, table, tr { break-inside: avoid; page-break-inside: avoid; }
+  figure img { max-height: 78mm; width: auto; max-width: 100%; margin: 0 auto; }
+  figcaption { font-size: 8.5pt; }
+  table { font-size: 8.5pt; margin: 0.4rem 0 0.8rem; }
+  th, td { padding: 0.12rem 0.3rem; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Appalti pubblici italiani 2019-2025: quattro schemi cercati nei dati aperti ANAC</h1>
+<div class="sommario">
+<p>Abbiamo letto 34,8 milioni di procedure di acquisto pubblico registrate da ANAC tra il 2019 e il 2025, cercando quattro schemi anomali.</p>
+<p>Il risultato più solido è che gli importi si addensano subito sotto la soglia dell’affidamento diretto e la seguono quando la legge la sposta. Gli altri tre sono più sfumati: un lavoro su tre non risulta finito nei dati, i casi con un solo offerente dipendono da cosa si compra, e le imprese che vincono quasi sempre nello stesso ente sono poche.</p>
+<p>Un’anomalia non è una prova: è un punto da approfondire sugli atti. Per ogni risultato diciamo quanto regge e quali spiegazioni innocue esistono.</p>
+</div>
+<p class="data">Autore: Davide Caniatti · pubblicato il 15 novembre 2026 · dati ANAC scaricati il 18 ottobre 2026</p>
+
+<h2>Cosa abbiamo fatto e con quali dati</h2>
+
+<p><strong>La fonte e i volumi.</strong> I dati vengono dal <a href="https://dati.anticorruzione.it/opendata/">portale open data dell’Autorità nazionale anticorruzione (ANAC)</a>, con licenza <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>: 31 dataset in formato CSV, scaricati in blocco. Si parte da 34.803.052 procedure (34,8 milioni) del 2019-2025: 5.002.344 gare ordinarie e 29.800.708 acquisti piccoli. Ogni acquisto ha un <strong>CIG</strong>, il Codice identificativo di gara; in una gara divisa in parti, ogni parte (lotto) ha il suo. Lo <strong>smartcig</strong> è il CIG semplificato per gli acquisti sotto 40.000 euro: pochi campi e nessun esito. Vi si agganciano le tabelle degli esiti, degli enti e, per i lavori, di avvio e fine contratto, costi, varianti e sospensioni (elenco in appendice A).</p>
+
+<p><strong>Le quattro domande e il metodo.</strong></p>
+<ol>
+<li><strong>Gli importi si addensano sotto la soglia dell’affidamento diretto?</strong> Contiamo gli affidamenti negli ultimi 1.000 euro prima della soglia in vigore e li confrontiamo con quelli attesi guardando gli importi vicini, per ogni periodo di legge e mese per mese. Controllo: cifre tonde che non sono soglie.</li>
+<li><strong>Quanti lavori finiscono con tempi e costi molto sopra il previsto?</strong> Confrontiamo il termine previsto con la fine registrata e l’importo aggiudicato con quello finale. Contiamo anche i lavori che non registrano la fine, altrimenti il quadro è falsato.</li>
+<li><strong>Dove le gare hanno un solo offerente?</strong> Nelle gare con bando contiamo i lotti con un solo offerente dichiarato, per tipo di acquisto, importo, anno e regione, tenendo conto di cosa si compra e del numero di lotti.</li>
+<li><strong>Ci sono imprese che vincono quasi sempre nello stesso ente?</strong> Per ogni coppia ente-impresa calcoliamo la quota di gare vinte; è «estrema» se è almeno metà, con almeno 10 vittorie e 20 gare dell’ente. Poi togliamo i casi con spiegazioni ovvie e contiamo una volta sola i lotti della stessa gara.</li>
+</ol>
+
+<p><strong>I controlli di qualità.</strong> Nessuna riga è stata cancellata: le righe sporche sono contate e segnalate. Il numero di righe lette coincide con quello dichiarato da ANAC in 132 file su 132. Tra i problemi: il 37,9% delle righe di <code>aggiudicazioni</code> ha un CIG fuori periodo; 33.993 importi sono a zero, 370 negativi, 344 sopra il miliardo; l’1,9% dei codici fiscali dei vincitori non supera il controllo.</p>
+
+<p><strong>La seconda verifica.</strong> Tutti i numeri chiave sono stati ricalcolati una seconda volta, con le interrogazioni riscritte da zero: i conti tornano quasi sempre (scarti sotto l’1%), i problemi erano nell’interpretazione. Sono stati corretti, per esempio, il picco a 40.000 euro (da 22,6 a circa 9 volte) e un presunto «buco» sopra la soglia che non esiste. Sono stati tolti i giudizi di «improbabilità» sulle coppie ente-impresa, i nomi di persone fisiche e i nomi legati a errori di dato.</p>
+
+<p><strong>Nomi.</strong> Gli enti pubblici sono nominati solo dove i numeri reggono, sempre con il contesto che li spiega. Le imprese private non sono nominate. Mai nomi di persone.</p>
+
+<p>Un’appendice dedicata agli enti con sede a Milano è su <a href="https://milanoindati.it/appalti/">milanoindati.it/appalti</a>.</p>
+
+<h2 class="nuova-pagina">Risultato 1. Gli enti si adeguano alla soglia dell’affidamento diretto, e la seguono quando la legge la sposta</h2>
+<p class="titolo-risultato">Appena sotto la soglia che permette di affidare senza gara ci sono molte più procedure di quante ne prevedano gli importi vicini, e il picco si sposta con la legge.</p>
+
+<figure>
+<img src="grafici/01_picco_soglia_si_sposta.png" alt="Quattro pannelli, uno per periodo di legge, con il numero mensile di affidamenti per gruppi di 1.000 euro di importo: il gruppo subito sotto la soglia in vigore è evidenziato in blu scuro.">
+<figcaption><strong>Quando la legge sposta la soglia, il picco di importi si sposta con lei.</strong> Un pannello per periodo (soglie 40.000, 75.000, 139.000, 140.000 euro; i due mesi del 2020 con soglia a 150.000 non sono mostrati); in blu scuro il gruppo di 1.000 euro subito sotto la soglia in vigore. Non è un giudizio su chi sta sotto soglia: sono importi scritti sui codici di gara e possono dipendere da abitudini amministrative. <span class="f">Fonte: ANAC, cig e smartcig, 2019-2025.</span></figcaption>
+</figure>
+
+<figure>
+<img src="grafici/02_prova_mese_per_mese.png" alt="Linee mensili della quota di affidamenti sotto 75.000, 139.000 e 140.000 euro; le tre linee salgono subito dopo le date delle norme, mentre la linea di controllo a 59.000 resta piatta.">
+<figcaption><strong>Ogni volta che la soglia cambia, il picco compare sotto la nuova soglia.</strong> Per ogni mese, quanti affidamenti stanno nel gruppo di 1.000 euro sotto 75.000, 139.000 e 140.000, su 100 tra 20.000 e 160.000 euro. La linea grigia (59.000-59.999) è il controllo: nessuna norma, nessun picco. Non si legge la grandezza del picco nel 2024-2025 (sistema ANAC cambiato). <span class="f">Fonte: ANAC, cig e smartcig, 2019-2025.</span></figcaption>
+</figure>
+
+<p>La legge consente l’affidamento diretto sotto una cifra che è cambiata più volte. Per servizi e forniture: 40.000 euro fino al 16 luglio 2020; 150.000 dal 17 luglio 2020; 75.000 dal 15 settembre 2020; 139.000 dal 1° giugno 2021; 140.000 dal 1° luglio 2023 (appendice B). Abbiamo contato gli affidamenti negli ultimi 1.000 euro sotto la soglia in vigore.</p>
+<ul>
+<li><strong>Prima del 17 luglio 2020</strong>, servizi e forniture: 111.530 affidamenti tra 39.000 e 39.999 euro contro 11.872 attesi, cioè circa 9 volte (da 6,7 a 9,5 secondo il confronto).</li>
+<li><strong>Dopo i cambi di legge</strong>: 5.466 sotto 75.000 contro 789 attesi (6,9 volte); 8.806 sotto 139.000 contro 1.162 (7,6); 21.307 sotto 140.000 contro 1.564 (13,6). Anche nei due mesi tra il 17 luglio e il 14 settembre 2020, quando la soglia era 150.000 euro per tutti, il picco compare sotto 150.000: 311 affidamenti di servizi e forniture contro 53 attesi (5,8 volte). Mese per mese, la quota sotto 75.000 passa da circa lo 0,2-0,3% a 1,2-2,2% a partire da settembre-ottobre 2020, subito dopo l’entrata in vigore della soglia; lo stesso succede nel giugno-luglio 2021 sotto 139.000 e nel luglio 2023 sotto 140.000.</li>
+<li><strong>Non è la cifra tonda</strong>: sotto 30.000, 60.000 e 120.000 euro il rapporto resta tra 0,91 e 1,06. Prima di luglio 2020 il 77% degli affidamenti dell’ultimo intervallo è diretto, spesso con importi come 39.000 o 39.999 euro.</li>
+<li><strong>Dopo il 2020</strong> il picco a 39.999 resta (8,3 e 7,6 volte nel 2020-2023; 4,0 dal luglio 2023), anche perché 40.000 resta il limite degli smartcig. Pesano pochi enti sanitari: ESTAR, la centrale acquisti della sanità toscana, ha 3.312 importi a un euro dalla soglia in vigore (quasi tutti a 39.999 euro prima di luglio 2020), l’AUSL di Reggio Emilia 2.380, l’ASST di Vimercate 1.193 e l’AUSL di Piacenza 1.158. Contando tutti gli anni, gli importi a 39.999 euro sono circa 12.200 per ESTAR (circa 9.000 dopo luglio 2020), 6.000 per Reggio Emilia, 3.500 per Vimercate e 3.200 per Piacenza. Un’ipotesi, da verificare sugli atti, è che questi enti aprano codici con un importo «tetto» da cui poi fanno acquisti più piccoli.</li>
+<li><strong>Dimensione</strong>: circa 153.000 affidamenti in eccesso (153.101, lo 0,44% dei 34.760.169 con importo valido), pari a circa 9,9 miliardi di euro di valore a base di gara. Non è spesa e non sono soldi sottratti alla concorrenza: è il valore nominale dei contratti in più.</li>
+</ul>
+
+<div class="riquadro">
+<h4>Quanto regge</h4>
+<dl>
+<dt class="regge">Regge</dt>
+<dd>Il picco subito sotto la soglia in vigore (rapporti da 4 a 17) e il suo spostamento con la norma, con il controllo a 59.000 stabile: la prova più solida del progetto. Non dipende dalle cifre tonde.</dd>
+<dt class="parte">Regge in parte</dt>
+<dd>La grandezza del picco a 40.000: dipende dal confronto, perché lì l’archivio cambia (smartcig sotto, CIG ordinari sopra), e l’atteso è calcolato in modo diverso che alle altre soglie, quindi i rapporti non vanno messi in fila come se fossero la stessa misura. Il picco a 39.999 dopo il 2020 è un fatto, la sua interpretazione è debole. Gli enti con la quota più alta dipendono dal tipo di ente dedotto dal nome.</dd>
+<dt class="no">Non regge</dt>
+<dd>Il «buco» sopra la soglia (rapporto 1,38: nessun calo). Il frazionamento: nel caso più stretto 12.111 gruppi in 3.391 enti, ma la quota non è più alta alla soglia vera che a cifre vicine. Le differenze tra regioni.</dd>
+</dl>
+</div>
+
+<div class="riquadro">
+<h4>Spiegazioni innocue</h4>
+<ul>
+<li>Stare sotto soglia è legale, e dal luglio 2020 al giugno 2023 la legge indicava l’affidamento diretto come la modalità da seguire sotto queste soglie.</li>
+<li>Gli importi sono stime iniziali, spesso tonde, non prezzi pagati; alcuni CIG potrebbero avere un «tetto» di 39.999 euro e poi spese molto più basse.</li>
+<li>Convenzioni, listini, accordi quadro e gare a lotti producono affidamenti simili senza essere frazionamenti. Emergenza 2020-2021 e cambio di sistema nel 2024.</li>
+</ul>
+</div>
+
+<p class="approfondire"><strong>Da approfondire.</strong> I pochi enti, soprattutto sanitari, che aprono migliaia di CIG a 39.999 euro: confrontare nei loro atti l’importo scritto sul CIG con quanto è stato pagato, che i dati ANAC non contengono.</p>
+
+<h2 class="nuova-pagina">Risultato 2. Un lavoro pubblico su tre non risulta finito nei dati, e mancano soprattutto i lavori più grandi</h2>
+<p class="titolo-risultato">Tra i lavori con il termine scaduto da almeno sei mesi, il 31% non ha alcuna data di fine; la mancanza pesa soprattutto sui lavori sopra il milione di euro.</p>
+
+<figure>
+<img src="grafici/04_lavori_senza_fine_registrata.png" alt="Barre della quota di lavori senza data di fine registrata per fascia di importo: da 22 a 34% fino a 1 milione di euro, 61% da 1 a 5 milioni, 79% oltre 5 milioni; riga di riferimento al 31% per tutti i lavori.">
+<figcaption><strong>Un lavoro su tre non risulta finito nei dati, e mancano soprattutto i lavori più grandi.</strong> Tra i lavori il cui termine era scaduto da almeno sei mesi, il 31% non ha nessuna data di fine: il 22-34% fino a 1 milione di euro, il 61% da 1 a 5 milioni, il 79% oltre 5 milioni. Non si legge «questi lavori non sono mai finiti»: manca la data, non il lavoro. I confronti di puntualità tra regioni o anni sulla sola mediana non vanno fatti. <span class="f">Fonte: ANAC, avvio_contratto, fine_contratto, aggiudicazioni, 2019-2025.</span></figcaption>
+</figure>
+
+<p>I CIG ordinari di lavori 2019-2025 sono 744.916. Per 181.372 conosciamo i tempi, per 149.363 il costo finale, per 126.737 entrambi.</p>
+<ul>
+<li><strong>Chi non registra.</strong> Dei 261.688 lavori con termine scaduto da almeno sei mesi, 80.283 (30,7%) non hanno nessuna riga di fine, e solo lo 0,8% di questi ha un collaudo o un importo finale. La fine è registrata nel 77% dei lavori tra 40.000 e 150.000 euro, nel 37% tra 1 e 5 milioni, nel 20% sopra i 5 milioni.</li>
+<li><strong>Chi registra.</strong> Il ritardo mediano è 1 giorno, ma il 50,3% finisce dopo il termine, il 34,4% supera di oltre la metà la durata prevista e il 5,7% ha più di un anno di ritardo. In orario è il 49,2% tra chi registra, tra il 33,7% e il 65,2% contando anche gli altri.</li>
+<li><strong>Costi.</strong> Scostamento mediano 0,0%; il 22,1% supera il +10% e l’1,6% il +50%.</li>
+<li><strong>Dove.</strong> Il ritardo cresce con l’importo (mediana 133 giorni da 1 a 5 milioni, 0 sotto i 150.000 euro). A parità di mix, contando anche chi non registra, restano sopra l’atteso per il tempo solo Sardegna, Umbria e Calabria.</li>
+<li><strong>Casi estremi.</strong> Dei 30 maggiori scostamenti di costo in euro, 23 sono errori di inserimento o confronti non validi (cifre con zeri in più, accordi quadro), 5 non sono stati controllati, 1 è da verificare e 1 è un aumento di costo probabilmente reale, dovuto a tre varianti registrate (un lavoro PNRR del porto di Palermo, +34%). Non pubblichiamo gli altri nomi.</li>
+<li><strong>Sospensioni.</strong> Le sospensioni registrate spiegano al massimo il 37% dei giorni di ritardo.</li>
+</ul>
+
+<div class="riquadro">
+<h4>Quanto regge</h4>
+<dl>
+<dt class="regge">Regge</dt>
+<dd>Che molti lavori non registrino la fine, e siano diversi dagli altri (più grandi, più spesso con bando). Il ritardo che sale con l’importo. Il fatto che quasi tutti i maggiori aumenti di costo siano errori di cifre.</dd>
+<dt class="parte">Regge in parte</dt>
+<dd>La misura dei ritardi: vale per il 69% che registra, il termine può essere già prorogato e un lavoro su cinque scrive la fine uguale al termine. I costi: manca il finale per quattro lavori su cinque. Le regioni: solo tre reggono.</dd>
+<dt class="no">Non regge</dt>
+<dd>Le classifiche di enti e imprese per nome: il 13% di enti con ritardo sopra l’atteso scende a circa 3,5% tenendo conto di regione e procedura. Il confronto tra anni sulla sola mediana: il 2024-2025 sembra migliore perché i lavori lunghi non sono finiti. Ogni lettura di colpa.</dd>
+</dl>
+</div>
+
+<div class="riquadro">
+<h4>Spiegazioni innocue</h4>
+<ul>
+<li>Sospensioni per maltempo o pandemia e proroghe per cause non imputabili all’impresa.</li>
+<li>Varianti legittime fino al 20% dell’importo (in certi casi 50%): gran parte dello scostamento oltre +10% è entro la legge.</li>
+<li>Termine già spostato, costo finale non aggiornato, accordi quadro non confrontabili importo contro importo, rincari dei materiali nel 2021-2022.</li>
+</ul>
+</div>
+
+<p class="approfondire"><strong>Da approfondire.</strong> I lavori sopra il milione di euro senza fine registrata: chiedere agli enti, con accesso agli atti, se sono conclusi, e verificare i certificati di collaudo.</p>
+
+<h2 class="nuova-pagina">Risultato 3. Le gare con un solo offerente dipendono da cosa si compra, non da dove</h2>
+<p class="titolo-risultato">Nelle gare con bando 2019-2023 ha un solo offerente il 13% dei lotti di lavori, il 34% dei servizi e il 49% delle forniture.</p>
+
+<figure>
+<img src="grafici/03_un_solo_offerente_per_settore.png" alt="Barre orizzontali della quota di lotti con un solo offerente: forniture 49%, servizi 34%, lavori 13%; sotto, le principali categorie merceologiche, con apparecchiature mediche e farmaci al 53%.">
+<figcaption><strong>Un solo offerente dipende da cosa si compra: molte forniture, pochi lavori.</strong> Quota di lotti con una sola impresa offerente, nelle gare con bando, 2019-2023: forniture 49%, servizi 34%, lavori 13%; sotto, le categorie con almeno 5.000 lotti (apparecchiature mediche e farmaci 53%, architettura e ingegneria 14%). Non si legge «un solo offerente = irregolarità» (per i farmaci spesso c’è un solo produttore) né che il dato valga per tutte le gare: il numero di offerenti c’è per circa un lotto su due. <span class="f">Fonte: ANAC, cig e aggiudicazioni, 2019-2023.</span></figcaption>
+</figure>
+
+<p>Le gare con bando sono 586.004 CIG ordinari nel 2019-2025, ma solo 282.350 (48%) hanno il numero di offerenti. Restano fuori affidamenti diretti, adesioni a convenzioni e smartcig.</p>
+<ul>
+<li><strong>Per settore</strong> (2019-2023, su 196.636 lotti con il dato): lavori 13%, servizi 34%, forniture 49%. Nelle gare con più di 20 lotti il dato sale al 54%, contro il 30% delle gare a lotto unico.</li>
+<li><strong>Nel tempo</strong>, contando i lotti: 33% (2019), 30%, 40%, 42%, 44% (2023); stima 42% e 43% nel 2024-2025. Il salto 2020-2021 è per circa il 72% un cambio di composizione (più lotti di gare grandi). Contando ogni gara una volta sola, nel 2021-2023 è 32,4%, 34,1% e 32,2%: dal 2021 il livello è stabile.</li>
+<li><strong>Correzione 2024-2025.</strong> In circa un lotto su dieci il numero di offerenti dichiarato è più basso delle offerte ammesse, il che è impossibile. Corretto, il 2024-2025 passa da 50% e 52% a 42,2% e 43,2%. Nel 2019-2023 invece l’elenco dei partecipanti contiene quasi solo i vincitori e non si può usare.</li>
+<li><strong>Per regione.</strong> Tolto l’effetto di cosa si compra, importo e numero di lotti, nessuna regione ha una quota alta in modo solido.</li>
+<li><strong>Per ente</strong>, tra quelli con almeno 600 lotti, le quote più alte sono di aziende sanitarie e di centrali acquisti per la sanità: Azienda sanitaria territoriale di Pesaro e Urbino 84% su 671 lotti; Azienda ospedaliera Città della Salute e della Scienza di Torino 81% su 991; Umbria Salute e Servizi 75% su 4.393. Il contesto: sono quasi tutti lotti di farmaci e dispositivi medici (83%, 91% e 97%), spesso in gare con più di 20 lotti (69%, 32% e 92%), dove un solo produttore per lotto è frequente. Per enti con lo stesso tipo di appalto, importi, procedura e numero di lotti ci si aspetterebbe il 54%, 43% e 57%. Sono quote instabili: Pesaro passa dal 94% nel 2019-2023 al 52% nel 2024-2025.</li>
+</ul>
+
+<div class="riquadro">
+<h4>Quanto regge</h4>
+<dl>
+<dt class="regge">Regge</dt>
+<dd>La differenza tra lavori, servizi e forniture, che resta con ogni criterio alternativo; il peso dei lotti e delle centrali; l’assenza di regioni alte in modo solido.</dd>
+<dt class="parte">Regge in parte</dt>
+<dd>I livelli per anno: esatti, ma valgono per un lotto su due e per i lotti, non per le gare (per gara 25,8%-34,1%). La stima 2024-2025 è una nostra correzione, con qualche punto di incertezza; il 2019-2020 è meno certo. La classifica degli enti cambia da un periodo all’altro.</dd>
+<dt class="no">Non regge</dt>
+<dd>La crescita tra 2021 e 2023: per lotto è +3,7 punti, ma con un intervallo da -2,2 a +9,0; per gara è -0,2.</dd>
+</dl>
+</div>
+
+<div class="riquadro">
+<h4>Spiegazioni innocue</h4>
+<ul>
+<li>Prodotti con un solo produttore (brevetto, compatibilità), soprattutto farmaci e apparecchiature mediche; lotti assegnati per produttore.</li>
+<li>Gare con molti lotti e centrali di committenza; gare piccole o tecniche; accordi quadro con più fornitori.</li>
+</ul>
+<p>Per confronto, le gare finanziate dal PNRR hanno meno spesso un solo offerente (21% contro 45% nel 2022-2023).</p>
+</div>
+
+<p class="approfondire"><strong>Da approfondire.</strong> Nelle gare a molti lotti di centrali e aziende sanitarie, leggere negli atti perché alcuni lotti hanno avuto un solo offerente: un solo produttore o requisiti molto stretti. Per il 2024-2025, chiedere ad ANAC perché il numero di offerenti è incoerente in circa un caso su dieci.</p>
+
+<h2 class="nuova-pagina">Risultato 4. Imprese che vincono quasi sempre nello stesso ente: cercato, trovato poco</h2>
+<p class="titolo-risultato">Nelle gare competitive vincere quasi sempre nello stesso ente è raro: succede in meno di 2 enti su 100.</p>
+
+<figure>
+<img src="grafici/05_vincere_sempre_nello_stesso_ente.png" alt="Barre della quota di enti in cui il primo fornitore vince almeno metà delle gare competitive: forniture 1,4%, servizi 1,1%, lavori 0,1%.">
+<figcaption><strong>Nelle gare competitive vincere quasi sempre nello stesso ente è raro: meno di 2 enti su 100.</strong> Quota di enti (almeno 20 gare competitive nel tipo di appalto) in cui il primo fornitore vince almeno metà delle gare: forniture 1,4% (10 enti su 690), servizi 1,1% (15 su 1.413), lavori 0,1% (2 su 1.517). Negli affidamenti diretti di forniture la quota sale al 2,4%. Non si legge «gli altri enti sono a posto» né come un giudizio su questi 27 enti: il dato dice che c’è una concentrazione, non perché. <span class="f">Fonte: ANAC, cig e aggiudicatari, 2019-2025.</span></figcaption>
+</figure>
+
+<p>Il perimetro sono 3.472.282 CIG con almeno un vincitore valido, di cui 484.172 in procedure competitive: gare con bando e procedure negoziate con almeno 2 imprese invitate o offerenti. «Competitiva» quindi non vuol dire sempre molta concorrenza: a volte le imprese invitate sono solo due.</p>
+<ul>
+<li><strong>Le coppie estreme</strong>, calcolate dentro ogni categoria di prodotto, sono 70 nelle procedure competitive e 751 negli affidamenti diretti (più 193 in adesioni ad accordi quadro). Per 63 delle 70 competitive c’è almeno una spiegazione innocua; per 22 la maggior parte delle vittorie viene da gare con un solo offerente, tema del Risultato 3 più che dell’ente.</li>
+<li><strong>Conta come si contano le vittorie.</strong> Contando una volta sola i lotti della stessa gara e gli ordini dello stesso accordo quadro, le estreme scendono da 70 a 26 e da 751 a 318: molte «centinaia di vittorie» sono una sola gara con tanti lotti.</li>
+<li><strong>Cosa resta.</strong> Senza spiegazioni trovate dai controlli automatici restano 4 coppie competitive (2 con gare a offerente unico) e 107 dirette, per lo più del 2024-2025, quando entrano nei dati acquisti piccoli (importo mediano 15.000 euro): gite scolastiche, carburante, piccoli lavori comunali.</li>
+<li><strong>I due casi competitivi rimasti, guardati da vicino, hanno una spiegazione visibile nei dati.</strong> Un distributore di gas ha comprato contatori elettronici del gas in procedure negoziate, nel 2019-2023: un produttore ha vinto 29 dei 50 lotti con esito (58%, 5,3 milioni di euro), un secondo produttore 19 e un terzo 2; nella maggior parte dei lotti le offerte erano due. È un mercato con pochissimi produttori, e 22 lotti su 72 non hanno un vincitore registrato. Nel secondo caso una cooperativa sociale ha vinto 19 dei 35 lotti con esito di una città metropolitana per assistenza all’autonomia e trasporto di studenti con disabilità (16 gare distinte, 26,6 milioni di euro): erano in gran parte procedure aperte, e 11 delle 19 vittorie sono arrivate in gare con 6-12 offerenti. Qui la concentrazione nasce da gare contese, non da gare senza concorrenza. Per questo non indichiamo i nomi.</li>
+</ul>
+
+<div class="riquadro">
+<h4>Quanto regge</h4>
+<dl>
+<dt class="regge">Regge</dt>
+<dd>Il quadro generale: il primo fornitore vince in media il 7-9% delle gare e solo in circa un ente su cento arriva a metà. La seconda verifica conta di poco diversamente gli enti, ma conclude lo stesso. Regge anche che pesi più di tutto il modo di contare (da 70 a 26).</dd>
+<dt class="parte">Regge in parte</dt>
+<dd>Il numero delle coppie estreme: vuol dire solo «almeno metà delle gare, con 10 vittorie e 20 gare dell’ente». L’elenco dei casi senza spiegazione dipende da ciò che i controlli automatici riescono a vedere: guardano le spiegazioni come accordi quadro o un solo offerente, ma non vedono i mercati con due o tre produttori né le vittorie in gare con molti concorrenti, come mostrano i due casi rimasti.</dd>
+<dt class="no">Non regge</dt>
+<dd>Il 59% di coppie «improbabili» e le probabilità «1 su un miliardo» della prima versione: misuravano la severità del modello, non l’anomalia degli enti. Sono state tolte.</dd>
+</dl>
+</div>
+
+<div class="riquadro">
+<h4>Spiegazioni innocue</h4>
+<ul>
+<li>Contratti derivati da accordi quadro o convenzioni; contratti continuativi (carburante, manutenzioni, noleggi); società in house o partecipate.</li>
+<li>Gare a molti lotti o con un solo offerente; mercati con due o tre produttori; vittorie in gare aperte con molti concorrenti; cooperative sociali con lotti riservati; enti piccoli o isolati; unico operatore sul territorio.</li>
+</ul>
+</div>
+
+<p class="approfondire"><strong>Da approfondire.</strong> Per le coppie che restano senza spiegazione, soprattutto i 107 affidamenti diretti ricorrenti del 2024-2025, gli atti possono dire se c’erano lotti riservati e quante imprese erano state invitate: informazioni che i dati ANAC non contengono.</p>
+
+<h2 class="nuova-pagina">Limiti che valgono per tutto</h2>
+<ul>
+<li><strong>Esiti mancanti.</strong> Nel 2019-2023 solo il 46-55% dei CIG ordinari ha un esito (87-91% nel 2024-2025); la fine dei lavori c’è nel 43-49% dei casi nel 2019-2021 e nel 14-18% nel 2024-2025. Le analisi valgono per la parte che ha i dati.</li>
+<li><strong>Il cambio di sistema nel 2024.</strong> Il numero di offerenti è vuoto per l’88% delle righe 2024 e il 90% del 2025; la data di pubblicazione è spesso molto più tarda della procedura; entrano molti acquisti piccoli. I confronti 2023-2024 non sono alla pari.</li>
+<li><strong>Tipo di ente dedotto dal nome.</strong> Le colonne ANAC che indicherebbero società in house e partecipate sono sempre «false», e la natura giuridica registrata è troppo generica. Qualche errore di classificazione è certo.</li>
+<li><strong>Date delle procedure approssimate.</strong> La legge guarda la data in cui la procedura è avviata, che nei dati non c’è: i conteggi usano la scadenza delle offerte, la pubblicazione o la comunicazione. Qualche affidamento a cavallo di un cambio di soglia può finire nel periodo sbagliato.</li>
+<li><strong>«Nessuna variante» non si distingue da «non comunicata».</strong> Vale per tutti i lavori.</li>
+<li><strong>L’unità di conto è il lotto (CIG), non la gara</strong>, nei Risultati 1, 3 e 4. Le date non sono allineate tra i risultati. L’importo è la stima a base di gara, non la spesa.</li>
+</ul>
+
+<p><strong>Tabelle e codice.</strong> Tabelle e codice delle analisi sono disponibili su richiesta, scrivendo dalla <a href="https://davidecaniatti.com/contact-davidecaniatti">pagina dei contatti</a>.</p>
+
+<h2 class="nuova-pagina">Appendice A. I dataset ANAC usati</h2>
+<p>Righe nel file finale, dopo aver tenuto per ogni chiave la versione più recente. Nessuna riga è stata cancellata: quelle sostituite sono conservate a parte.</p>
+<table>
+<thead><tr><th>Dataset (tabella)</th><th class="n">Righe</th><th>Anni</th></tr></thead>
+<tbody>
+<tr><td><code>cig</code> (gare ordinarie; una riga per codice CPV, 5.002.344 CIG)</td><td class="n">5.039.241</td><td>2019-2025, un file per mese</td></tr>
+<tr><td><code>smartcig</code> (acquisti piccoli)</td><td class="n">29.800.708</td><td>2019-2025, un file per mese</td></tr>
+<tr><td><code>aggiudicazioni</code></td><td class="n">6.333.590</td><td>tutti gli anni*</td></tr>
+<tr><td><code>aggiudicatari</code></td><td class="n">6.978.946</td><td>tutti gli anni*</td></tr>
+<tr><td><code>partecipanti</code></td><td class="n">9.458.416</td><td>tutti gli anni*</td></tr>
+<tr><td><code>avvio_contratto</code></td><td class="n">2.507.222</td><td>tutti gli anni*</td></tr>
+<tr><td><code>fine_contratto</code></td><td class="n">1.297.316</td><td>tutti gli anni*</td></tr>
+<tr><td><code>quadro_economico</code></td><td class="n">6.919.807</td><td>tutti gli anni*</td></tr>
+<tr><td><code>varianti</code></td><td class="n">363.210</td><td>tutti gli anni*</td></tr>
+<tr><td><code>sospensioni</code></td><td class="n">250.670</td><td>tutti gli anni*</td></tr>
+<tr><td><code>stati_avanzamento</code></td><td class="n">1.569.432</td><td>tutti gli anni*</td></tr>
+<tr><td><code>collaudo</code></td><td class="n">730.531</td><td>tutti gli anni*</td></tr>
+<tr><td><code>categorie_opera</code></td><td class="n">13.421.312</td><td>tutti gli anni*</td></tr>
+<tr><td><code>pubblicazioni</code></td><td class="n">12.582.629</td><td>tutti gli anni*</td></tr>
+<tr><td><code>subappalti</code></td><td class="n">509.637</td><td>tutti gli anni*</td></tr>
+<tr><td><code>stazioni_appaltanti</code></td><td class="n">48.040</td><td>anagrafica, senza anno</td></tr>
+<tr><td><code>dec_tipo_scelta_contraente</code> (decodifica)</td><td class="n">47</td><td>-</td></tr>
+<tr><td><code>dec_modalita_realizzazione</code> (decodifica)</td><td class="n">23</td><td>-</td></tr>
+<tr><td><code>dec_tipo_fattispecie_contrattuale</code> (decodifica)</td><td class="n">77</td><td>-</td></tr>
+</tbody>
+</table>
+<p class="f">* File completo più sette aggiornamenti mensili (da aprile a ottobre 2026); l’anno di una riga è quello del CIG a cui si riferisce. Non è stato scaricato il 2026 di <code>cig</code> e <code>smartcig</code>: circa 0,9 milioni di CIG presenti negli esiti sono del 2026.</p>
+
+<h2>Appendice B. Le soglie dell’affidamento diretto</h2>
+<p>Importi in euro, al netto dell’IVA (dedotto dai dati). Soglia sotto la quale è consentito l’affidamento diretto.</p>
+<table>
+<thead><tr><th>Periodo</th><th>Date</th><th class="n">Lavori</th><th class="n">Servizi e forniture</th><th>Norma</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>fino al 16/07/2020</td><td class="n">40.000</td><td class="n">40.000</td><td>d.lgs. 50/2016, art. 36, c. 2, lett. a)</td></tr>
+<tr><td>2</td><td>17/07/2020 - 14/09/2020</td><td class="n">150.000</td><td class="n">150.000</td><td>d.l. 76/2020, art. 1, c. 2, lett. a), testo originario</td></tr>
+<tr><td>2</td><td>15/09/2020 - 31/05/2021</td><td class="n">150.000</td><td class="n">75.000</td><td>d.l. 76/2020, art. 1, c. 2, lett. a), come modificato dalla legge di conversione 120/2020</td></tr>
+<tr><td>3</td><td>01/06/2021 - 30/06/2023</td><td class="n">150.000</td><td class="n">139.000</td><td>d.l. 76/2020, art. 1, c. 2, lett. a), come modificato dall’art. 51 del d.l. 77/2021 (procedure avviate dal 1° giugno 2021)</td></tr>
+<tr><td>4</td><td>dal 01/07/2023</td><td class="n">150.000</td><td class="n">140.000</td><td>d.lgs. 36/2023, art. 50, c. 1, lett. a) e b)</td></tr>
+</tbody>
+</table>
+<p class="f">Testi consultati su Normattiva. Il d.lgs. 36/2023 è in vigore dal 1° aprile 2023 ma le sue disposizioni hanno efficacia dal 1° luglio 2023 (art. 229). Nei conteggi i due mesi dal 17 luglio al 14 settembre 2020 sono un periodo a sé. Altre soglie guardate come confronto: 5.000; 1.000.000 per i lavori; soglie europee.</p>
+
+<footer>
+<p><strong>Autore:</strong> Davide Caniatti. <strong>Segnalazioni e rettifiche:</strong> dalla <a href="https://davidecaniatti.com/contact-davidecaniatti">pagina dei contatti</a>. Chi è citato in questa pagina e ritiene che un dato sia sbagliato o presentato senza il contesto giusto può scrivere: le segnalazioni verificate portano a una correzione.</p>
+<p><strong>Correzioni:</strong> nessuna dopo la pubblicazione del 15 novembre 2026. Ogni correzione futura sarà indicata qui, con la data e con cosa è cambiato.</p>
+<p><strong>Dati e licenza:</strong> elaborazioni su dati dell’Autorità nazionale anticorruzione (ANAC), <a href="https://dati.anticorruzione.it/opendata/">dati.anticorruzione.it/opendata</a>, rilasciati con licenza <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale (CC BY-SA 4.0)</a>. I dati sono stati modificati e aggregati: righe ricondotte all’ultima versione, flag di qualità, classificazioni degli enti e delle procedure, conteggi. I grafici e le tabelle di questa pagina sono rilasciati con la stessa licenza CC BY-SA 4.0, citando come fonte ANAC e questa pagina. ANAC non ha partecipato a queste analisi e non ne è responsabile.</p>
+</footer>
+
+</main>
+</body>
+</html>

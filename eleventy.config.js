@@ -30,6 +30,8 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy({ "src/vault-box": "vault-box" });
+  // il paper sugli appalti: pagina a se' gia' pronta (copiata da appalti-anac/paper), solo sul sito vero, non nel laboratorio
+  if (!build.lab) eleventyConfig.addPassthroughCopy({ "src/appalti": "appalti" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   // ---------- Collezioni ----------
