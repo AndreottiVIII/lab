@@ -85,7 +85,7 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', cfg.gaId);
+    window.gtag('config', cfg.gaId, { allow_google_signals: false, allow_ad_personalization_signals: false }); /* niente segnali pubblicitari */
     var s = document.createElement('script');
     s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(cfg.gaId);
     document.head.appendChild(s);
@@ -102,7 +102,7 @@
   }
   if (banner) {
     var c = stored();
-    if (c === 'granted') loadGA(); else if (c !== 'denied') banner.hidden = false;
+    if (c === 'granted') loadGA(); else if (c === 'denied') clearGA(); /* rifiutato: via i cookie _ga anche se Google li ha riscritti all'ultimo */ else banner.hidden = false;
     $$('[data-cookie]', banner).forEach(function (b) {
       b.addEventListener('click', function () {
         var v = b.getAttribute('data-cookie'); store(v); banner.hidden = true;

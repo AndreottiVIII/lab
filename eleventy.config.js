@@ -8,6 +8,7 @@ const sharp = require("sharp");
 const build = require("./src/_data/build.js");
 const house = require("./lib/house.js");
 const letters = require("./src/_data/letters.json");
+const siteData = require("./src/_data/site.json");
 
 const SRC_IMG = path.join(__dirname, "src", "img");
 const WIDTHS = [480, 960, 1600];
@@ -189,6 +190,18 @@ module.exports = async function (eleventyConfig) {
   };
 
   eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    // pagine gia' pronte copiate cosi' come sono (il paper appalti): consenso ai cookie + Analytics con lo stesso ID del sito.
+    // Si aggiunge qui, nella copia pubblicata, cosi' la pagina sorgente resta identica a quella di appalti-anac. Mai nel laboratorio.
+    if (!build.lab && !build.mockup && siteData.ga_id) {
+      for (const rel of ["appalti/index.html"]) {
+        const f = path.join(dir.output, rel);
+        if (!fs.existsSync(f)) continue;
+        const h = fs.readFileSync(f, "utf8");
+        if (h.includes("/assets/js/consent.js") || !h.includes("</body>")) continue;
+        fs.writeFileSync(f, h.replace("</body>", `<script src="/assets/js/consent.js" data-ga="${siteData.ga_id}"></script>
+</body>`));
+      }
+    }
     const outW = path.join(dir.output, "img", "w");
     fs.mkdirSync(outW, { recursive: true });
     const cache = path.join(__dirname, ".cache", "img-w");
