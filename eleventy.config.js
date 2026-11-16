@@ -30,6 +30,7 @@ module.exports = async function (eleventyConfig) {
   // ---------- File copiati cosi' come sono ----------
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" }); // i browser lo cercano alla radice anche dove la pagina non lo indica
   eleventyConfig.addPassthroughCopy({ "src/vault-box": "vault-box" });
   // il paper sugli appalti: pagina a se' gia' pronta (copiata da appalti-anac/paper), solo sul sito vero, non nel laboratorio
   if (!build.lab) eleventyConfig.addPassthroughCopy({ "src/appalti": "appalti" });
@@ -196,10 +197,19 @@ module.exports = async function (eleventyConfig) {
       for (const rel of ["appalti/index.html"]) {
         const f = path.join(dir.output, rel);
         if (!fs.existsSync(f)) continue;
-        const h = fs.readFileSync(f, "utf8");
-        if (h.includes("/assets/js/consent.js") || !h.includes("</body>")) continue;
-        fs.writeFileSync(f, h.replace("</body>", `<script src="/assets/js/consent.js" data-ga="${siteData.ga_id}"></script>
-</body>`));
+        let h = fs.readFileSync(f, "utf8");
+        if (!h.includes("/assets/js/consent.js") && h.includes("</body>"))
+          h = h.replace("</body>", `<script src="/assets/js/consent.js" data-ga="${siteData.ga_id}"></script>
+</body>`);
+        // icona del sito e misure dei grafici (Lighthouse): senza misure la pagina "salta" mentre si caricano le immagini
+        if (!h.includes('rel="icon"')) h = h.replace("</head>", '<link rel="icon" href="/img/favicon.png">\n</head>');
+        h = h.replace(/<img (?![^>]*\swidth=)([^>]*?)src="([^"]+\.png)"([^>]*)>/g, (m, pre, src, post) => {
+          const file = path.join(path.dirname(f), src);
+          if (!fs.existsSync(file)) return m;
+          const b = fs.readFileSync(file);
+          return `<img ${pre}src="${src}" width="${b.readUInt32BE(16)}" height="${b.readUInt32BE(20)}"${post}>`;
+        });
+        fs.writeFileSync(f, h);
       }
     }
     const outW = path.join(dir.output, "img", "w");
@@ -282,6 +292,8 @@ module.exports = async function (eleventyConfig) {
       if (!/decoding=/.test(a)) a += ` decoding="async"`;
       return `<img ${a}>`;
     });
+    // 4b) la prima immagine della pagina si carica subito e per prima (Lighthouse: e' quasi sempre la piu' grande visibile)
+    content = content.replace(' loading="lazy"', ' loading="eager" fetchpriority="high"');
 
     // 5) link esterni in una nuova scheda
     content = content.replace(/<a href="(https?:\/\/[^"]+)"([^>]*)>/g, (m, href, rest) => {

@@ -40,6 +40,9 @@ jobs:
         run: node scripts/check-urls.mjs
         env:
           PATH_PREFIX: ${{ vars.PATH_PREFIX }}
+      # validatore HTML (regole in .htmlvalidate.json): se una pagina e' scritta male il sito non va online
+      - name: Validatore HTML
+        run: npx html-validate "_site/**/*.html"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

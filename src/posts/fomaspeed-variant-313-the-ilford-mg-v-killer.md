@@ -36,9 +36,9 @@ To see the difference in behavior concerning development, I repeated the experim
 
 From the scalar specimens, you can only get a rough idea, so I finished the first test session and tried to print a photo with the split grade method. I don't really like this method, but it quickly showed an operational difference between the two cards: Ilford has a much more gradual contrast response while Foma still suffers from the sensitivity jump defect that plagued the Ilford MGIV.
 
-![](/img/grado0artboard-1.png "Grade 0 test strip")
+![Grade 0 test strip](/img/grado0artboard-1.png "Grade 0 test strip")
 
-![](/img/grado5artboard-1.png "Grade 5 test strip")
+![Grade 5 test strip](/img/grado5artboard-1.png "Grade 5 test strip")
 
 I tried to print the two copies as evenly as possible. Both cards managed to render the tonal range of the negative well, and once again the main difference between the two is the tone.
 
