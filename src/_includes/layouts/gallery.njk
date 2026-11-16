@@ -7,17 +7,26 @@ layout: layouts/base.njk
 {%- set idx = drawers | urlIndex(cur) -%}
 {%- set nextD = drawers[(idx + 1) % drawers.length] -%}
 <div class="wrap gal">
-  <div class="title mono"><span>DARKROOM · PRINT DRAWER {{ idx + 1 }} OF {{ drawers.length }}</span><span>{{ gallery.length }} PRINTS</span></div>
+  <div class="title mono"><span>DARKROOM · PRINT DRAWER {{ idx + 1 }} OF {{ drawers.length }}</span><span>{% if maintenance %}CLOSED{% else %}{{ gallery.length }} PRINTS{% endif %}</span></div>
   <header class="fl-head">
     <div class="h"><b>Darkroom</b><a href="/photography">← all {{ drawers.length }} galleries</a></div>
     <h1>{{ title }}</h1>
+    {%- if not maintenance %}
     <p class="count mono">{{ gallery.length }} prints · tap one to see it whole</p>
+    {%- endif %}
   </header>
+  {%- if maintenance %}
+  <section class="maintenance" aria-label="{{ title }}">
+    <p class="mono">UNDER MAINTENANCE</p>
+    <p>This drawer is closed for now. The other galleries of the darkroom are open.</p>
+  </section>
+  {%- else %}
   <section class="prints" aria-label="{{ title }}" data-lightbox>
     {%- for g in gallery %}
     <a class="lb" href="{{ g.image }}" data-alt="{{ g.alt }}"><img src="{{ g.image }}" alt="{{ g.alt }}" sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 300px">{% if fullsize_label != false %}<span class="sr-only">View fullsize</span>{% endif %}<span class="pn" aria-hidden="true"><i>{{ loop.index | pad2 }}</i><span>print {{ loop.index | pad2 }} of {{ gallery.length }}</span></span></a>
     {%- endfor %}
   </section>
+  {%- endif %}
   <div class="others"><p class="k">THE {{ drawers.length }} DRAWERS OF THE DARKROOM</p><ol>
     {%- for d in drawers %}<li><a href="{{ d.url }}"{% if d.url == cur %} aria-current="page"{% endif %}><i>{{ loop.index }}</i>{{ d.title }}</a></li>{% endfor %}
   </ol></div>

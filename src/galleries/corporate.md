@@ -22,6 +22,8 @@ gallery:
 - image: /img/image-asset-o2fkug.jpg
   alt: ' Ozone generator, 2024 '
 floor: photography
+# in manutenzione: la pagina resta allo stesso indirizzo, ma le foto non si vedono (togliere questa riga per riaprirla)
+maintenance: true
 featured: true
 order: 4
 image: /img/house-corporate-b.jpg

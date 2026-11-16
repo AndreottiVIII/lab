@@ -27,7 +27,7 @@
 <meta property="og:description" content="{{ description }}">
 {%- endif %}
 {#- immagine per le condivisioni: la copertina dell'articolo, se no la prima foto della galleria, se no la scheda della casa (img/share.jpg) -#}
-{%- set shareImg = cover or (gallery[0].image if gallery and gallery[0]) or "/img/share.jpg" -%}
+{%- set shareImg = cover or (gallery[0].image if gallery and gallery[0] and not maintenance) or "/img/share.jpg" -%}
 <meta property="og:image" content="{{ origin }}{{ shareImg }}">
 {%- if shareImg == "/img/share.jpg" %}
 <meta property="og:image:width" content="1200">

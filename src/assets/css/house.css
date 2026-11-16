@@ -396,6 +396,9 @@ img.broken { display: none; }
 .gal .fl-head .count { color: #d9705e; }
 .gal .fl-head h1 { font-size: clamp(44px, 7vw, 84px); }
 .gal .title { color: #d9705e; }
+.maintenance { margin: 40px 0 10px; padding: 48px 24px; border: 1px dashed currentColor; text-align: center; opacity: .9; }
+.maintenance .mono { letter-spacing: .18em; font-size: 13px; margin-bottom: 10px; }
+.maintenance p + p { font-size: 17px; }
 .prints { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px 22px; align-items: start; margin-top: 22px; }
 .prints > a { display: block; position: relative; cursor: zoom-in; }
 .prints img { width: 100%; height: auto; display: block; border: 1px solid #5a2a22; }
